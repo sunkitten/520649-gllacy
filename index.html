@@ -8,44 +8,44 @@
   <body>
     <header class="page-header">
       <div class="container">
+        <a class="main-logo">
+          <img class="main-logo__img" src="img/logo.png" width="154px" height="64" alt="Логотип"/>
+        </a>
         <nav class="main-navigation">
-          <a class="main-logo">
-            <img class="main-logo__img" src="img/logo.png" width="154px" height="64" alt="Логотип"/>
-          </a>
           <ul class="main-menu">
             <li class="main-menu__item">
-              <a class="menu__link" href="#">Каталог</a>
-              <ul class="menu-catalog">
+              <a class="main-menu__link" href="#">Каталог</a>
+              <ul class="menu-catalog">  
                 <li class="menu-catalog__item">
-                  <a class="menu__link menu-catalog__link" href="#">Новинки</a>
+                  <a class="menu-catalog__link" href="#">Новинки</a>
                 </li>
                 <li class="menu-catalog__item">
-                  <a class="menu__link menu-catalog__link" href="catalog.html">Сливочное</a>
+                  <a class="menu-catalog__link" href="catalog.html">Сливочное</a>
                 </li>
                 <li class="menu-catalog__item">
-                  <a class="menu__link menu-catalog__link" href="#">Щербеты</a>
+                  <a class="menu-catalog__link" href="#">Щербеты</a>
                 </li>
                 <li class="menu-catalog__item">
-                  <a class="menu__link menu-catalog__link" href="#">Фруктовый лед</a>
+                  <a class="menu-catalog__link" href="#">Фруктовый лед</a>
                 </li>
                 <li class="menu-catalog__item">
-                  <a class="menu__link menu-catalog__link" href="#">Мелорин</a>
+                  <a class="menu-catalog__link" href="#">Мелорин</a>
                 </li>
               </ul>
             </li>
             <li class="main-menu__item">
-              <a class="menu__link" href="#">Доставка и оплата</a>
+              <a class="main-menu__link" href="#">Доставка и оплата</a>
             </li>
             <li class="main-menu__item">
-              <a class="menu__link" href="#">О Компании</a>
+              <a class="main-menu__link" href="#">О Компании</a>
             </li>
           </ul>
           <ul class="user-navigation">
-            <li class="search user-navigation__item">
+            <li class="user-navigation__item search">
               Поиск
               <div class="search-container">
                 <form class="search-form" method="get">
-                  <input class="header__input search-form__input" type="text" name="search" placeholder="Что ищем?"/>
+                  <input class="input search-form__input" type="text" name="search" placeholder="Что ищем?"/>
                 </form>
               </div>
             </li>
@@ -53,8 +53,8 @@
               Вход
               <div class="login-container">
                 <form class="login-form" method="get">
-                  <input class="header__input login-form__input" type="email" name="email" placeholder="Электронная почта"/>
-                  <input class="header__input login-form__input" type="password" name="password" placeholder="Пароль"/>
+                  <input class="input login-form__input" type="email" name="email" placeholder="Электронная почта"/>
+                  <input class="input login-form__input" type="password" name="password" placeholder="Пароль"/>
                   <input class="button login-form__input" type="submit" name="button" value="Войти"/>
                 </form>
                 <a class="login__link" href="#">Забыли пароль?</a>
@@ -66,8 +66,8 @@
             </li>
           </ul>
         </nav>
-        <p class="header-info">
-          С 10 до 20, ежедневно<br /><b>8 812 450-25-25</b>
+        <p class="work-time">
+          С 10 до 20, ежедневно <b class="work-time__phone">8 812 450-25-25</b>
         </p>
       </div>
     </header>
@@ -173,10 +173,10 @@
       <!-- Блок преимуществ -->
       <section class="about-us">
         <h2 class="visually-hidden">О нас</h2>
-        <p class="about-us__item">
+        <p class="about-us__text">
           Магазин-Гэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
         </p>
-        <ul class="features">
+        <ul class="about-us__features features">
           <li class="features__item">
             <p class="features__text">
               Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
@@ -201,20 +201,22 @@
       </section>
       <!-- Конец блока преимуществ -->
 
-      <article class="blog">
-        <h2 class="blog__title">Новое в нашем блоге</h2>
-        <a class="blog__link" href="#">10 способов сервирвки фруктовых щербетов к столу</a>
-      </article>
-      <section class="mail">
-        <h2 class="visually-hidden">Подписаться на рассылку</h2>
-        <p class="mail__text">
-          Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-        </p>
-        <form class="mail-form" method="get">
-          <input class="mail__input" type="email" name="mail" placeholder="Электронная почта" />
-          <input class="button mail__button" type="submit" name="mail-submit" value="Отправить" />
-        </form>
-      </section>
+      <div class="row-container">
+        <article class="blog">
+          <h2 class="blog__title">Новое в нашем блоге</h2>
+          <a class="blog__link" href="#">10 способов сервирвки фруктовых щербетов к столу</a>
+        </article>
+        <section class="mail">
+          <h2 class="visually-hidden">Подписаться на рассылку</h2>
+          <p class="mail__text">
+            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+          </p>
+          <form class="mail-form" method="get">
+            <input class="input mail__input" type="email" name="mail" placeholder="Электронная почта" />
+            <input class="button mail__button" type="submit" name="mail-submit" value="Отправить" />
+          </form>
+        </section>
+      </div>
 
       <!-- Блок карты -->
       <section class="maps">

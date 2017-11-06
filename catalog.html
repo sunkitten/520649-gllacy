@@ -8,44 +8,44 @@
   <body>
   	<header class="page-header">
       <div class="container">
+      	<a class="main-logo" href="index.html">
+          <img class="main-logo__img" src="img/logo.png" width="154px" height="64" alt="Логотип"/>
+        </a>
         <nav class="main-navigation">
-          <a class="main-logo" href="index.html">
-            <img class="main-logo__img" src="img/logo.png" width="154px" height="64" alt="Логотип"/>
-          </a>
           <ul class="main-menu">
             <li class="main-menu__item">
-              <a class="menu__link" href="#">Каталог</a>
+              <a class="main-menu__link" href="#">Каталог</a>
               <ul class="menu-catalog">
                 <li class="menu-catalog__item">
-                  <a class="menu__link menu-catalog__link" href="#">Новинки</a>
+                  <a class="menu-catalog__link" href="#">Новинки</a>
                 </li>
                 <li class="menu-catalog__item">
-                  <a class="menu__link menu-catalog__link" href="catalog.html">Сливочное</a>
+                  <a class="menu-catalog__link menu-catalog__link--active" href="catalog.html">Сливочное</a> <!-- нужно ли оставлять этот пункт меню ссылкой? -->
                 </li>
                 <li class="menu-catalog__item">
-                  <a class="menu__link menu-catalog__link" href="#">Щербеты</a>
+                  <a class="menu-catalog__link" href="#">Щербеты</a>
                 </li>
                 <li class="menu-catalog__item">
-                  <a class="menu__link menu-catalog__link" href="#">Фруктовый лед</a>
+                  <a class="menu-catalog__link" href="#">Фруктовый лед</a>
                 </li>
                 <li class="menu-catalog__item">
-                  <a class="menu__link menu-catalog__link" href="#">Мелорин</a>
+                  <a class="menu-catalog__link" href="#">Мелорин</a>
                 </li>
               </ul>
             </li>
             <li class="main-menu__item">
-              <a class="menu__link" href="#">Доставка и оплата</a>
+              <a class="main-menu__link" href="#">Доставка и оплата</a>
             </li>
             <li class="main-menu__item">
-              <a class="menu__link" href="#">О Компании</a>
+              <a class="main-menu__link" href="#">О Компании</a>
             </li>
           </ul>
           <ul class="user-navigation">
-            <li class="search user-navigation__item">
+            <li class="user-navigation__item search">
               Поиск
               <div class="search-container">
                 <form class="search-form" method="get">
-                  <input class="header__input search-form__input" type="text" name="search" placeholder="Что ищем?"/>
+                  <input class="input search-form__input" type="text" name="search" placeholder="Что ищем?"/>
                 </form>
               </div>
             </li>
@@ -53,8 +53,8 @@
               Вход
               <div class="login-container">
                 <form class="login-form" method="get">
-                  <input class="header__input login-form__input" type="email" name="email" placeholder="Электронная почта"/>
-                  <input class="header__input login-form__input" type="password" name="password" placeholder="Пароль"/>
+                  <input class="input login-form__input" type="email" name="email" placeholder="Электронная почта"/>
+                  <input class="input login-form__input" type="password" name="password" placeholder="Пароль"/>
                   <input class="button login-form__input" type="submit" name="button" value="Войти"/>
                 </form>
                 <a class="login__link" href="#">Забыли пароль?</a>
@@ -111,8 +111,8 @@
         	<li class="breadcrumbs__item"><a href="#">Каталог</a></li>
         	<li class="breadcrumbs__item">Сливочное</li>
         </ul>
-        <p class="header-info">
-          С 10 до 20, ежедневно<br /><b>8 812 450-25-25</b>
+        <p class="work-time">
+          С 10 до 20, ежедневно <b class="work-time__phone">8 812 450-25-25</b>
         </p>
     	</div>
     </header>
@@ -120,51 +120,51 @@
 		<main>
 			<h1>Сливочное мороженное</h1>
 			<form class="filters-form" method="post">
-				<div class="filters__item">
-					<p class="filters-item__name">Сортировка</p>
-					<select class="filters-item__filter">
-						<option selected value="по популярности">по популярности</option>
+				<div class="filters-form__item form-item">
+					<p class="form-item__name">Сортировка</p>
+					<select class="form-item__filter">
+						<option selected value="по популярности">по популярности</option> 
 						<option value="сначала недорогие">сначала недорогие</option>
 						<option value="сначала дорогие">сначала дорогие</option>
 						<option value="по жирности">по жирности</option>
 					</select>
-			</div>
-			<div class="filters__item">
-				<label for="price" class="filters-item__name">Цена: 100 руб. – 500 руб.</label>
-				<input type="range" min="0" max="500" id="price name="price" class="filters-item__filter"></input>
-			</div>
-			<div class="filters__item">
-				<p class="filters-item__name">Жирность:</p>
-				<div class="filters-item__filter filter">
-					<input class="filter__input" type="radio" id="0%" name="fat-content">
-					<label class="filter__name" id="0%">0%</label>
-					<input class="filter__input filter__input_checked" type="radio" id="10%" name="fat-content" checked>
-					<label class="filter__name filter__name_checked" id="10%">до 10%</label>
-					<input class="filter__input" type="radio" id="30%" name="fat-content">
-					<label class="filter__name" id="30%">до 30%</label>
-					<input class="filter__input" type="radio" id=">30%" name="fat-content">
-					<label class="filter__name" id=">30%">выше 30%</label>
-			 </div>
-			</div>
-			<div class="filters__item">
-				<p class="filters-item__name">Наполнители:</p>
-				<div class="filters-item__filter filter">
-					<input class="filter__input" type="checkbox" id="chocolate" name="filler" checked>
-					<label class="filter__name" for="chocolate" class="filter__name">шоколадные</label>
-					<input class="filter__input" type="checkbox" id="sugar" name="filler" checked>
-					<label class="filter__name" for="sugar" class="filter__name">сахарные присыпки</label>
-					<input class="filter__input" type="checkbox" id="fruit" name="filler">
-					<label class="filter__name" for="fruit" class="filter__name">фрукты</label>
-					<input class="filter__input" type="checkbox" id="syrup" name="filler">
-					<label class="filter__name" for="syrup" class="filter__name">сиропы</label>
-					<input class="filter__input" type="checkbox" id="jam" name="filler">
-					<label class="filter__name" for="jam" class="filter__name">джемы</label>
 				</div>
-			</div>
-				<input class="button filters__button" type="submit" value="Применить">
+				<div class="filters-form__item form-item">
+					<label class="form-item__name" for="price">Цена: 100 руб. – 500 руб.</label>
+					<input class="form-item__filter" type="range" min="0" max="500" id="price" name="price">
+				</div>
+				<div class="filters-form__item form-item">
+					<p class="form-item__name">Жирность:</p>
+					<div class="form-item__filter filter">
+						<input class="filter__input" type="radio" id="0%" name="fat-content">
+						<label class="filter__name" id="0%">0%</label>
+						<input class="filter__input" type="radio" id="10%" name="fat-content" checked>
+						<label class="filter__name" id="10%">до 10%</label>
+						<input class="filter__input" type="radio" id="30%" name="fat-content">
+						<label class="filter__name" id="30%">до 30%</label>
+						<input class="filter__input" type="radio" id=">30%" name="fat-content">
+						<label class="filter__name" id=">30%">выше 30%</label>
+					</div>
+				</div>
+				<div class="filters-form__item form-item">
+					<p class="form-item__name">Наполнители:</p>
+					<div class="form-item__filter filter">
+						<input class="filter__input" type="checkbox" id="chocolate" name="filler" checked>
+						<label class="filter__name" for="chocolate">шоколадные</label>
+						<input class="filter__input" type="checkbox" id="sugar" name="filler" checked>
+						<label class="filter__name" for="sugar">сахарные присыпки</label>
+						<input class="filter__input" type="checkbox" id="fruit" name="filler">
+						<label class="filter__name" for="fruit">фрукты</label>
+						<input class="filter__input" type="checkbox" id="syrup" name="filler">
+						<label class="filter__name" for="syrup">сиропы</label>
+						<input class="filter__input" type="checkbox" id="jam" name="filler">
+						<label class="filter__name" for="jam">джемы</label>
+					</div>
+				</div>
+				<input class="button filters-form__button" type="submit" value="Применить">
 			</form>
 			
-			<ul class="ice-cream-list">
+			<ul class="catalog-list">
 				<li>
 					<article class="ice-cream">
 						<img src="img/ice-orange.png" alt="ice-cream" width="267" height="267" class="ice-cream__img">
@@ -287,13 +287,13 @@
 				</li>
 			</ul>
 			<ul class="pages">
-				<li class="pages__item pages__item-prev pages__item_disabled"><</li>
-				<li class="pages__item pages__item_active">1</li>
-				<li class="pages__item">2</li>
-				<li class="pages__item">3</li>
-				<li class="pages__item">4</li>
-				<li class="pages__item">5</li>
-				<li class="pages__item pages__item-next">></li>
+				<li class="pages__item pages__item--prev pages__item--disabled"><a class="pages__link"><</a></li>
+				<li class="pages__item pages__item--active"><a class="pages__link">1</a></li>
+				<li class="pages__item"><a class="pages__link" href="#">2</a></li>
+				<li class="pages__item"><a class="pages__link" href="#">3</a></li>
+				<li class="pages__item"><a class="pages__link" href="#">4</a></li>
+				<li class="pages__item"><a class="pages__link" href="#">5</a></li>
+				<li class="pages__item pages__item--next"><a class="pages__link" href="#">></a></li>
 			</ul>
 		</main>
 
