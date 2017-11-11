@@ -12,7 +12,7 @@
   <header class="page-header">
     <div class="container">
       <a class="main-logo">
-        <img class="main-logo__img" src="img/logo.svg" width="154px" height="64" alt="Логотип" />
+        <img class="main-logo__img" src="img/logo.svg" width="154px" height="64" alt="Логотип Глейси" />
       </a>
       <nav class="main-navigation">
         <ul class="main-menu">
@@ -45,10 +45,11 @@
         </ul>
         <ul class="user-navigation">
           <li class="user-navigation__item search">
-            <p class="visually-hidden">Поиск</p>
+            <span class="visually-hidden">Поиск</span>
             <div class="search-container">
               <form class="search-form" method="get">
-                <input class="input search-form__input" type="text" name="search" placeholder="Что ищем?" />
+                <label class="visually-hidden" for="search">Поиск</label>
+                <input class="input search-form__input" type="text" name="search" id="search" placeholder="Что ищем?" />
               </form>
             </div>
           </li>
@@ -56,8 +57,14 @@
             Вход
             <div class="login-container">
               <form class="login-form" method="get">
-                <input class="input login-form__input" type="email" name="email" placeholder="Электронная почта" />
-                <input class="input login-form__input" type="password" name="password" placeholder="Пароль" />
+                <p>
+                  <label class="visually-hidden" for="login-form__email">Электронная почта</label>
+                  <input class="input login-form__input" type="email" name="email" id="login-form__email" placeholder="Электронная почта" />
+                </p>
+                <p>
+                  <label class="visually-hidden" for="login-form__password">Пароль</label>
+                  <input class="input login-form__input" type="password" name="password" id="login-form__password" placeholder="Пароль" />
+                </p>
                 <input class="button login-form__btn" type="submit" name="button" value="Войти" />
               </form>
                 <a class="login__link" href="#">Забыли пароль?</a>
@@ -65,7 +72,7 @@
             </div>
           </li>
           <li class="user-navigation__item basket">
-            <a class="basket__link" href="#">Пусто</a>
+            <a class="basket__link" href="#" aria-label="Корзина">Пусто</a>
           </li>
         </ul>
       </nav>
@@ -81,13 +88,13 @@
       <!-- Слайдер еще не проходили. После вебинара нужно доработать -->
       <section class="slider">
         <h2 class=visually-hidden>Самые популярные наборы</h2>
-        <input class="slider__input" type="radio" id="btn-1" name="toggle" checked />
-        <input class="slider__input" type="radio" id="btn-2" name="toggle" />
-        <input class="slider__input" type="radio" id="btn-3" name="toggle" />
+        <input class="slider__input" type="radio" id="slider__radio-1" name="toggle" checked />
+        <input class="slider__input" type="radio" id="slider__radio-2" name="toggle" />
+        <input class="slider__input" type="radio" id="slider__radio-3" name="toggle" />
         <div class="slider__skin">
-          <label class="slider__radio" for="btn-1"></label>
-          <label class="slider__radio" for="btn-2"></label>
-          <label class="slider__radio" for="btn-3"></label>
+          <label class="slider__radio" for="slider__radio-1" aria-label="первый слайд"></label>
+          <label class="slider__radio" for="slider__radio-2" aria-label="второй слайд"></label>
+          <label class="slider__radio" for="slider__radio-3" aria-label="третий слайд"></label>
         </div>
         <ul class="slider__inner">
           <li class="slider__slide">
@@ -130,49 +137,49 @@
         <ul class="hit__list">
           <li class="hit__item">
             <article class="ice-cream">
-              <img src="img/ice-orange.jpg" alt="ice-cream" width="267" height="267" class="ice-cream__img">
+              <img src="img/ice-orange.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
               <p class="ice-cream__price">310 &#8381;
                 <span class="units">/кг</span>
               </p>
-              <p class="ice-cream__name">
+              <h3 class="ice-cream__name">
                 Сливочное с апельсиновым джемом и цитрусовой стружкой
-              </p>
+              </h3>
               <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
             </article>
           </li>
           <li class="hit__item">
             <article class="ice-cream">
-              <img src="img/ice-coffe.jpg" alt="ice-cream" width="267" height="267" class="ice-cream__img">
+              <img src="img/ice-coffe.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
               <p class="ice-cream__price">380 &#8381;
                 <span class="units">/кг</span>
               </p>
-              <p class="ice-cream__name">
+              <h3 class="ice-cream__name">
                 Сливочно-кофейное с кусочками шоколада
-              </p>
+              </h3>
               <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
             </article>
           </li>
           <li class="hit__item">
             <article class="ice-cream">
-              <img src="img/ice-strawberry.jpg" alt="ice-cream" width="267" height="267" class="ice-cream__img">
+              <img src="img/ice-strawberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
               <p class="ice-cream__price">355 &#8381;
                 <span class="units">/кг</span>
               </p>
-              <p class="ice-cream__name">
+              <h3 class="ice-cream__name">
                 Сливочно-клубничное с присыпкой из белого шоколада
-              </p>
+              </h3>
               <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
             </article>
           </li>
           <li class="hit__item">
             <article class="ice-cream">
-              <img src="img/ice-creme-brulee.jpg" alt="ice-cream" width="267" height="267" class="ice-cream__img">
+              <img src="img/ice-creme-brulee.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
               <p class="ice-cream__price">415 &#8381;
                 <span class="units">/кг</span>
               </p>
-              <p class="ice-cream__name">
+              <h3 class="ice-cream__name">
                 Сливочное крем-брюле с карамельной подливкой
-              </p>
+              </h3>
               <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
             </article>
           </li>
@@ -225,7 +232,10 @@
             и не слать всякой ненужной ерунды. Честно =)
           </p>
           <form class="mail-form" method="get">
-            <input class="input mail__input" type="email" name="mail" placeholder="Электронная почта" />
+            <p>
+              <label class="visually-hidden" for="mail-form">Электронная почта</label>
+              <input class="input mail__input" type="email" name="mail" id="mail-form" placeholder="Электронная почта" />
+            </p>
             <input class="button mail__button" type="submit" name="mail-submit" value="Отправить" />
           </form>
         </section>
@@ -235,7 +245,7 @@
     <section class="map">
       <h2 class="visually-hidden">Как нас найти</h2>
       <div class="map__img-container">
-        <img class="map__img" src="img/map.png" width="1200" height="640" />
+        <img class="map__img" src="img/map.png" width="1200" height="640" alt="Положение офиса на карте" />
       </div>
       <div class="container">
         <div class="contacts">
@@ -283,7 +293,7 @@
       </ul>
       <div class="copyright">
         <a class="copyright-logo" href="https://up.htmlacademy.ru/htmlcss/19">
-          <img class="copyright__img" src="img/logo-htmlacademy.svg" width="108" height="39" alt="html academy" />
+          <img class="copyright__img" src="img/logo-htmlacademy.svg" width="108" height="39" alt="логотип htmlacademy" />
         </a>
         <p class="copyright__text">
           Сделано в
@@ -299,12 +309,21 @@
       Мы обязательно вам ответим!
     </p>
     <form class="feedback-form" method="post">
-      <input class="feedback-form__input" type="text" name="name" placeholder="Как вас зовут?" />
-      <input class="feedback-form__input" type="email" name="feedback-email" placeholder="Ваша почта для ответа?" />
-      <textarea class="feedback-form__input" placeholder="Напишите что-нибудь..."></textarea>
+      <p>
+        <label class="visually-hidden" for="feedback-name">Ваше имя</label>
+        <input class="feedback-form__input" type="text" name="name" id="feedback-name" placeholder="Как вас зовут?" />
+      </p>
+      <p>
+        <label class="visually-hidden" for="feedback-email">Электронная почта</label>
+        <input class="feedback-form__input" type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?" />
+      </p>
+      <p>
+        <label class="visually-hidden" for="feedback-text">Место для отзыва</label>
+        <textarea class="feedback-form__input" id="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+      </p>
       <input class="button feedback-form__button" type="submit" name="feedback-button" value="Отправить" />
     </form>
-    <span class="modal-close">x</span>
+    <button class="modal-close" aria-label="Закрыть окно">x</button>
   </section>
 </body>
 
