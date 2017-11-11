@@ -48,7 +48,7 @@
           <li class="user-navigation__item search">
             <span class="visually-hidden">Поиск</span>
             <div class="search-container">
-              <form class="search-form" method="get">
+              <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
                 <label class="visually-hidden" for="search">Поиск</label>
                 <input class="input search-form__input" type="text" name="search" id="search" placeholder="Что ищем?" />
               </form>
@@ -57,7 +57,7 @@
           <li class="user-navigation__item login">
             Вход
             <div class="login-container">
-              <form class="login-form" method="get">
+              <form class="login-form" method="get" action="https://echo.htmlacademy.ru">
                 <p>
                   <label class="visually-hidden" for="login-form__email">Электронная почта</label>
                   <input class="input login-form__input" type="email" name="email" id="login-form__email" placeholder="Электронная почта" />
@@ -140,10 +140,10 @@
   <main>
     <div class="container">
       <h1 class="title">Сливочное мороженное</h1>
-      <form class="filters-form" method="post">
+      <form class="filters-form" method="post" action="https://echo.htmlacademy.ru">
         <div class="filters-form__item form-item">
           <p class="form-item__name">Сортировка</p>
-          <select class="form-item__filter" aria-label="сортировка">
+          <select class="form-item__filter" aria-label="сортировка" name="sorting">
             <option selected value="по популярности">по популярности</option>
             <option value="сначала недорогие">сначала недорогие</option>
             <option value="сначала дорогие">сначала дорогие</option>
@@ -157,28 +157,28 @@
         <fieldset class="filters-form__item form-item">
           <legend class="form-item__name">Жирность:</legend>
           <div class="form-item__filter filter">
-            <input class="filter__input" type="radio" id="0%" name="fat-content">
+            <input class="filter__input" type="radio" id="0%" name="fat-content" value="0">
             <label class="filter__name" for="0%">0%</label>
-            <input class="filter__input" type="radio" id="10%" name="fat-content" checked>
+            <input class="filter__input" type="radio" id="10%" name="fat-content" value="10" checked>
             <label class="filter__name" for="10%">до 10%</label>
-            <input class="filter__input" type="radio" id="30%" name="fat-content">
+            <input class="filter__input" type="radio" id="30%" name="fat-content" value="30">
             <label class="filter__name" for="30%">до 30%</label>
-            <input class="filter__input" type="radio" id=">30%" name="fat-content">
+            <input class="filter__input" type="radio" id=">30%" name="fat-content" value="100">
             <label class="filter__name" for=">30%">выше 30%</label>
           </div>
         </fieldset>
         <fieldset class="filters-form__item form-item">
           <legend class="form-item__name">Наполнители:</legend>
           <div class="form-item__filter filter">
-            <input class="filter__input" type="checkbox" id="chocolate" name="filler" checked>
+            <input class="filter__input" type="checkbox" id="chocolate" name="filler" value="chocolate" checked>
             <label class="filter__name" for="chocolate">шоколадные</label>
-            <input class="filter__input" type="checkbox" id="sugar" name="filler" checked>
+            <input class="filter__input" type="checkbox" id="sugar" name="filler" value="sugar" checked>
             <label class="filter__name" for="sugar">сахарные присыпки</label>
-            <input class="filter__input" type="checkbox" id="fruit" name="filler">
+            <input class="filter__input" type="checkbox" id="fruit" name="filler" value="fruit">
             <label class="filter__name" for="fruit">фрукты</label>
-            <input class="filter__input" type="checkbox" id="syrup" name="filler">
+            <input class="filter__input" type="checkbox" id="syrup" name="filler" value="syrup">
             <label class="filter__name" for="syrup">сиропы</label>
-            <input class="filter__input" type="checkbox" id="jam" name="filler">
+            <input class="filter__input" type="checkbox" id="jam" name="filler" value="jam">
             <label class="filter__name" for="jam">джемы</label>
           </div>
         </fieldset>
