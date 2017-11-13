@@ -46,11 +46,12 @@
         </ul>
         <ul class="user-navigation">
           <li class="user-navigation__item search">
-            <span class="visually-hidden">Поиск</span>
+            <img class="search__img" src="img/loupe.svg" alt="поиск">
             <div class="search-container">
               <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
                 <label class="visually-hidden" for="search">Поиск</label>
                 <input class="input search-form__input" type="text" name="search" id="search" placeholder="Что ищем?" />
+                <input class="visually-hidden" type="submit" name="search-btn" value="отправить">
               </form>
             </div>
           </li>
@@ -144,15 +145,24 @@
         <div class="filters-form__item form-item">
           <p class="form-item__name">Сортировка</p>
           <select class="form-item__filter" aria-label="сортировка" name="sorting">
-            <option selected value="по популярности">по популярности</option>
-            <option value="сначала недорогие">сначала недорогие</option>
-            <option value="сначала дорогие">сначала дорогие</option>
-            <option value="по жирности">по жирности</option>
+            <option selected value="popular">по популярности</option>
+            <option value="cheap">сначала недорогие</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="fat-content">по жирности</option>
           </select>
         </div>
         <div class="filters-form__item form-item">
-          <label class="form-item__name" for="filter-price">Цена: 100 руб. – 500 руб.</label>
-          <input class="form-item__filter" type="range" min="0" max="500" id="filter-price" name="price">
+          <!-- Нам пока не открыли видео об этом элементе, только на вебинаре проговорили общий принцып
+          по его созданию. Ниже написала, как я себе это представляю. -->
+          <p class="form-item__name" for="filter-price">Цена: 100 руб. – 500 руб.</p>
+          <div class="form-item__filter filter">
+            <svg width="176" height="36">
+              <line class="filter__line" x1="0" y1="18" x2="176" y2="18" stroke="rgba(255, 255, 255, 0.5)" stroke-width="4" />
+              <line class="filter__line" x1="14" y1="18" x2="120" y2="18" stroke="white" stroke-width="4" />
+            </svg>
+            <div class="filter__left-btn" tabindex="0"><img src="img/filter-button.svg" alt="левый указатель"></div>
+            <div class="filter__right-btn" tabindex="0"><img src="img/filter-button.svg" alt="правый указатель"></div>
+          </div>
         </div>
         <fieldset class="filters-form__item form-item">
           <legend class="form-item__name">Жирность:</legend>
