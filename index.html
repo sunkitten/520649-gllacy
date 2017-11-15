@@ -4,7 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
@@ -12,7 +15,7 @@
   <header class="page-header">
     <div class="container">
       <a class="main-logo">
-        <img class="main-logo__img" src="img/logo.svg" width="154px" height="64" alt="Логотип Глейси" />
+        <img class="main-logo__img" src="img/logo.svg" width="154" height="64" alt="Логотип Глейси" />
       </a>
       <nav class="main-navigation">
         <ul class="main-menu">
@@ -45,7 +48,9 @@
         </ul>
         <ul class="user-navigation">
           <li class="user-navigation__item search">
-            <img class="search__img" src="img/loupe.svg" alt="поиск">
+            <div class="user-navigation__icon">
+              <img class="search__img" src="img/loupe.svg" width="17" height="17" alt="поиск">
+            </div>
             <div class="search-container">
               <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
                 <label class="visually-hidden" for="search">Поиск</label>
@@ -55,7 +60,9 @@
             </div>
           </li>
           <li class="user-navigation__item login">
-            Вход
+            <div class="user-navigation__icon">
+              <span class="user-navigation__text">Вход</span>
+            </div>
             <div class="login-container">
               <form class="login-form" method="get" action="https://echo.htmlacademy.ru">
                 <p>
@@ -68,12 +75,12 @@
                 </p>
                 <input class="button login-form__btn" type="submit" name="button" value="Войти" />
               </form>
-                <a class="login__link" href="#">Забыли пароль?</a>
-                <a class="login__link" href="#">Новая регистрация</a>
+                <a class="link-black login__link" href="#">Забыли пароль?</a>
+                <a class="link-black login__link" href="#">Новая регистрация</a>
             </div>
           </li>
           <li class="user-navigation__item basket">
-            <a class="basket__link" href="#" aria-label="Корзина">Пусто</a>
+            <a class="user-navigation__icon basket__link" href="#" aria-label="Корзина">Пусто</a>
           </li>
         </ul>
       </nav>
@@ -116,14 +123,14 @@
       <!-- Банеры -->
       <section class="stock">
         <h2 class="visually-hidden">Акции</h2>
-        <article class="banner">
+        <article class="banner banner-raspberries">
           <h3 class="banner__title">Малинка даром!</h3>
           <p class="banner__text">
             При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.
           </p>
           <a class="banner__button button" href="#">Хочу варенье!</a>
         </article>
-        <article class="banner">
+        <article class="banner banner-chocolate">
           <h3 class="banner__title">Шоколадки даром!</h3>
           <p class="banner__text">
             При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
@@ -143,7 +150,9 @@
                 <span class="units">/кг</span>
               </p>
               <h3 class="ice-cream__name">
-                Сливочное с апельсиновым джемом и цитрусовой стружкой
+                <a class="link-white ice-cream__link" href="#">
+                  Сливочное с апельсиновым джемом и цитрусовой стружкой
+                </a>
               </h3>
               <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
             </article>
@@ -155,7 +164,9 @@
                 <span class="units">/кг</span>
               </p>
               <h3 class="ice-cream__name">
-                Сливочно-кофейное с кусочками шоколада
+                <a class="link-white ice-cream__link" href="#">
+                  Сливочно-кофейное с кусочками шоколада
+                </a>
               </h3>
               <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
             </article>
@@ -167,7 +178,9 @@
                 <span class="units">/кг</span>
               </p>
               <h3 class="ice-cream__name">
-                Сливочно-клубничное с присыпкой из белого шоколада
+                <a class="link-white ice-cream__link" href="#">
+                  Сливочно-клубничное с присыпкой из белого шоколада
+                </a>
               </h3>
               <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
             </article>
@@ -179,7 +192,9 @@
                 <span class="units">/кг</span>
               </p>
               <h3 class="ice-cream__name">
-                Сливочное крем-брюле с карамельной подливкой
+                <a class="link-white ice-cream__link" href="#">
+                  Сливочное крем-брюле с карамельной подливкой
+                </a>1172
               </h3>
               <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
             </article>
@@ -270,26 +285,34 @@
     <div class="container">
       <ul class="footer-social">
         <li class="footer-social__btn">
-          <a class="footer-social__link" href="#">Твитер</a>
+          <a class="footer-social__link" href="#" aria-label="твиттер">
+            <img src="img/twitter.svg" width="32" height="32" alt="твиттер">
+          </a>
         </li>
         <li class="footer-social__btn">
-          <a class="footer-social__link" href="#">Инстаграмм</a>
+          <a class="footer-social__link" href="#" aria-label="инстаграмм">
+            <img src="img/instagram.svg" width="32" height="32" alt="инстаграмм">
+          </a>
         </li>
         <li class="footer-social__btn">
-          <a class="footer-social__link" href="#">Фейсбук</a>
+          <a class="footer-social__link" href="#" aria-label="фейсбук">
+            <img src="img/fb.svg" width="32" height="32" alt="фейсбук">
+          </a>
         </li>
         <li class="footer-social__btn">
-          <a class="footer-social__link" href="#">Вконтакте</a>
+          <a class="footer-social__link" href="#" aria-label="вконтакте">
+            <img src="img/vk.svg" width="32" height="32" alt="вконтакте">
+          </a>
         </li>
       </ul>
       <ul class="footer-navigation">
         <li class="footer-navigation__items">
-          <a class="footer-navigation__link footer-navigation__link--bold" href="#">Для поставщиков</a>
-          <a class="footer-navigation__link" href="#">О производстве</a>
+          <a class="link-white footer-navigation__link footer-navigation__link--bold" href="#">Для поставщиков</a>
+          <a class="link-white footer-navigation__link" href="#">О производстве</a>
         </li>
         <li class="footer-navigation__items">
-          <a class="footer-navigation__link" href="#">Наши документы</a>
-          <a class="footer-navigation__link" href="#">Экологические стандарты</a>
+          <a class="link-white footer-navigation__link" href="#">Наши документы</a>
+          <a class="link-white footer-navigation__link" href="#">Экологические стандарты</a>
         </li>
       </ul>
       <div class="copyright">
@@ -298,33 +321,36 @@
         </a>
         <p class="copyright__text">
           Сделано в
-          <a class="copyright__link" href="https://up.htmlacademy.ru/htmlcss/19">HTML Academy</a>
-          &#169 2017
+          <a class="link-white copyright__link" href="https://up.htmlacademy.ru/htmlcss/19">HTML Academy</a>
+          &#169; 2017
         </p>
       </div>
     </div>
   </footer>
   <!-- всплывающее окно -->
-  <section class="modal modal-feedback">
-    <p>
+  <section class="modal feedback">
+    <h2 class="visually-hidden">Форма для отзыва</h2>
+    <p class="feedback__text">
       Мы обязательно вам ответим!
     </p>
     <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
       <p>
         <label class="visually-hidden" for="feedback-name">Ваше имя</label>
-        <input class="feedback-form__input" type="text" name="name" id="feedback-name" placeholder="Как вас зовут?" />
+        <input class="input feedback-form__input" type="text" name="name" id="feedback-name" placeholder="Как вас зовут?" />
       </p>
       <p>
         <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-        <input class="feedback-form__input" type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?" />
+        <input class="input feedback-form__input" type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?" />
       </p>
       <p>
         <label class="visually-hidden" for="feedback-text">Место для отзыва</label>
-        <textarea class="feedback-form__input" id="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+        <textarea class="input feedback-form__textarea" id="feedback-text" rows="6" placeholder="Напишите что-нибудь..."></textarea>
       </p>
-      <input class="button feedback-form__button" type="submit" name="feedback-button" value="Отправить" />
+      <input class="button feedback-form__btn" type="submit" name="feedback-button" value="Отправить" />
     </form>
-    <button class="modal-close" aria-label="Закрыть окно">x</button>
+    <button class="modal-close" aria-label="Закрыть окно">
+      <img src="img/cross-big.svg" alt="Закрыть окно" width="18" height="17">
+    </button>
   </section>
 </body>
 
