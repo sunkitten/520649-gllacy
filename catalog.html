@@ -48,10 +48,14 @@
         </ul>
         <ul class="user-navigation">
           <li class="user-navigation__item search">
-            <div class="user-navigation__icon">
-              <img class="search__img" src="img/loupe.svg" alt="поиск">
+            <div class="user-navigation__icon search__icon" tabindex="0">
+              <svg class="search__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="17" height="17" viewBox="0 0 17 17">
+                <path class="user-navigation__img-color search__img-color" fill="#fff"
+                d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
+              </svg>
             </div>
-            <div class="search-container">
+            <div class="user-navigation__inner search-container">
               <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
                 <label class="visually-hidden" for="search">Поиск</label>
                 <input class="input search-form__input" type="text" name="search" id="search" placeholder="Что ищем?" />
@@ -60,28 +64,49 @@
             </div>
           </li>
           <li class="user-navigation__item login">
-            <div class="user-navigation__icon">
+            <div class="user-navigation__icon" tabindex="0">
+              <svg class="login__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="21" height="19" viewBox="0 0 21 19">
+                <g class="user-navigation__img-color login__img-color" fill="#fff">
+                  <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
+                  <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
+                </g>
+              </svg>
               <span class="user-navigation__text">Вход</span>
             </div>
-            <div class="login-container">
+            <div class="user-navigation__inner login-container">
               <form class="login-form" method="get" action="https://echo.htmlacademy.ru">
-                <p>
+                <p class="login-form__item">
                   <label class="visually-hidden" for="login-form__email">Электронная почта</label>
                   <input class="input login-form__input" type="email" name="email" id="login-form__email" placeholder="Электронная почта" />
                 </p>
-                <p>
+                <p class="login-form__item">
                   <label class="visually-hidden" for="login-form__password">Пароль</label>
                   <input class="input login-form__input" type="password" name="password" id="login-form__password" placeholder="Пароль" />
                 </p>
                 <input class="button login-form__btn" type="submit" name="button" value="Войти" />
               </form>
-              <a class="link-black login__link" href="#">Забыли пароль?</a>
-              <a class="link-black login__link" href="#">Новая регистрация</a>
+              <div class="login__links">
+                <a class="link-black login__link" href="#">Забыли пароль?</a>
+                <a class="link-black login__link" href="#">Новая регистрация</a>
+              </div>
             </div>
           </li>
-          <li class="user-navigation__item basket">
-            <a class="user-navigation__icon basket__link basket__link--active" href="#" aria-label="Корзина">2 товара</a>
-            <div class="basket-container">
+          <li class="user-navigation__item basket basket--full">
+            <a class="user-navigation__icon basket__link basket__link--full" href="#" aria-label="Корзина">
+              <svg class="basket__img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="20px"
+              viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+                <g class="user-navigation__img-color" fill="#ffffff">
+                  <path d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
+                  L17.372,13z"></path>
+                  <circle cx="6.984" cy="18" r="2"></circle>
+                  <circle cx="15.984" cy="18" r="2"></circle>
+                </g>
+              </svg>
+              <span class="user-navigation__text">2 товара</span>
+            </a>
+            <div class="user-navigation__inner basket-container">
               <table class="basket-table">
                 <tr class="basket-table__row">
                   <td class="basket-table__cell">
