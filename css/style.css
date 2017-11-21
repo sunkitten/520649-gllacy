@@ -149,6 +149,8 @@ body {
 
 /*блок header*/
 .page-header {
+  position: relative;
+  z-index: 5px;
   padding-top: 9px;
 
   font-family: inherit;
@@ -307,6 +309,7 @@ body {
   position: absolute;
   top: 30px;
   right: 0;
+  z-index: 10;
 
   display: block;
 }
@@ -550,7 +553,7 @@ body {
   position: relative;
 
   width: 100%;
-  height: 476px;
+  height: 100%;
 }
 
 .slider__input {
@@ -558,21 +561,21 @@ body {
 }
 
 .slider__skin {
-  position: absolute;
-  bottom: 29px;
-  left: 0;
-  z-index: 10;
+  /*position: relative;
+  z-index: 3;*/
 
   display: flex;
-  justify-content: space-between;
-  width: 78px;
+  min-width: 860px;
+  max-width: 1146px;
+  width: 95.5%;
+  margin: 444px auto 63px;
 }
 
 .slider__radio {
   display: block;
   width: 16px;
   height: 16px;
-  margin: auto 0 0;
+  margin-right: 9px;
 
   border: 2px solid #ffffff;
   border-radius: 50%;
@@ -586,19 +589,21 @@ body {
 
 .slider__inner {
   padding: 0;
+  margin: 0;
 
   list-style: none;
 }
 
 .slider__slide {
   position: absolute;
-  top: -136px;
+  top: 0px;
+  z-index: -1;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
-  height: 881px;
+  height: 100%;
 
   opacity: 0;
   background-position: 50% 0;
@@ -611,7 +616,7 @@ body {
 
 .slider__slide:nth-child(2) {
   background-image: url(../img/slide-2.png);
-  background-position: 41% 0;
+  background-position: 48% 0;
 }
 
 .slider__slide:nth-child(3) {
@@ -622,11 +627,20 @@ body {
 #slider__radio-2:checked ~ .slider__inner .slider__slide:nth-child(2),
 #slider__radio-3:checked ~ .slider__inner .slider__slide:nth-child(3) {
   opacity: 1;
+  background-color: #849d8f;
+}
+
+#slider__radio-2:checked ~ .slider__inner .slider__slide:nth-child(2){
+  background-color: #8996a6;
+}
+
+#slider__radio-3:checked ~ ..slider__inner .slider__slide:nth-child(3){
+  background-color: #9d8b84;
 }
 
 .slider__subtitle {
   width: 680px;
-  margin: 117px auto 31px;
+  margin: 393px auto 29px;
 
   font-size: 58px;
   line-height: 60px;

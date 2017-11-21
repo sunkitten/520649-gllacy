@@ -12,7 +12,25 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <div class="slider">
+    <input class="slider__input" type="radio" id="slider__radio-1" name="toggle" checked />
+    <input class="slider__input" type="radio" id="slider__radio-2" name="toggle" />
+    <input class="slider__input" type="radio" id="slider__radio-3" name="toggle" />
+    <ul class="slider__inner">
+      <li class="slider__slide">
+        <h3 class="slider__subtitle">Крем-брюле и пломбир с малиновым джемом</h3>
+        <a class="button slider__button" href="#">Давайте оба!</a>
+      </li>
+      <li class="slider__slide">
+        <h3 class="slider__subtitle">Шоколадный пломбир и лимонный сорбет</h3>
+        <a class="button slider__button" href="#">Давайте оба!</a>
+      </li>
+      <li class="slider__slide">
+        <h3 class="slider__subtitle">Пломбир с помадкой и клубничный щербет</h3>
+        <a class="button slider__button" href="#">Давайте оба!</a>
+      </li>
+    </ul>
+    <header class="page-header">
     <div class="container">
       <a class="main-logo">
         <img class="main-logo__img" src="img/logo.svg" width="154" height="64" alt="Логотип Глейси" />
@@ -116,12 +134,17 @@
         <b class="work-time__phone">8 812 450-25-25</b>
       </p>
     </div>
-  </header>
-  <main class="content">
+    </header>
+    <div class="slider__skin">
+      <label class="slider__radio" for="slider__radio-1" aria-label="первый слайд"></label>
+      <label class="slider__radio" for="slider__radio-2" aria-label="второй слайд"></label>
+      <label class="slider__radio" for="slider__radio-3" aria-label="третий слайд"></label>
+    </div>
+    <main class="content">
     <div class="container">
       <h1 class="visually-hidden">Магазин мороженного Gllacy</h1>
       <!-- Слайдер еще не проходили. После вебинара нужно доработать -->
-      <section class="slider">
+      <!-- <section class="slider">
         <h2 class=visually-hidden>Самые популярные наборы</h2>
         <input class="slider__input" type="radio" id="slider__radio-1" name="toggle" checked />
         <input class="slider__input" type="radio" id="slider__radio-2" name="toggle" />
@@ -145,7 +168,7 @@
             <a class="button slider__button" href="#">Давайте оба!</a>
           </li>
         </ul>
-      </section>
+      </section> -->
       <!-- Конец слайдера -->
       <!-- Банеры -->
       <section class="stock">
@@ -307,8 +330,8 @@
       </div>
     </section>
     <!-- Конец блока карты -->
-  </main>
-  <footer class="page-footer">
+    </main>
+    <footer class="page-footer">
     <div class="container">
       <ul class="footer-social">
         <li class="footer-social__btn">
@@ -353,7 +376,8 @@
         </p>
       </div>
     </div>
-  </footer>
+    </footer>
+  </div>
   <!-- всплывающее окно -->
   <section class="modal feedback">
     <h2 class="visually-hidden">Форма для отзыва</h2>
