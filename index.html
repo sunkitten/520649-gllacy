@@ -30,8 +30,7 @@
         <a class="button slider__button" href="#">Давайте оба!</a>
       </li>
     </ul>
-    <header class="page-header">
-    <div class="container">
+    <header class="page-header container">
       <a class="main-logo">
         <img class="main-logo__img" src="img/logo.svg" width="154" height="64" alt="Логотип Глейси" />
       </a>
@@ -133,7 +132,6 @@
         С 10 до 20, ежедневно
         <b class="work-time__phone">8 812 450-25-25</b>
       </p>
-    </div>
     </header>
     <div class="slider__skin">
       <label class="slider__radio" for="slider__radio-1" aria-label="первый слайд"></label>
@@ -195,10 +193,12 @@
         <ul class="hit__list">
           <li class="hit__item">
             <article class="ice-cream">
-              <img src="img/ice-orange.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-              <p class="ice-cream__price">310 &#8381;
-                <span class="units">/кг</span>
-              </p>
+              <div class="ice-cream__inner ice-cream__inner--hit">
+                <img src="img/ice-orange.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+                <p class="ice-cream__price">310 &#8381;
+                  <span class="units">/кг</span>
+                </p>
+              </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочное с апельсиновым джемом и цитрусовой стружкой
@@ -209,10 +209,12 @@
           </li>
           <li class="hit__item">
             <article class="ice-cream">
-              <img src="img/ice-coffe.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-              <p class="ice-cream__price">380 &#8381;
-                <span class="units">/кг</span>
-              </p>
+              <div class="ice-cream__inner ice-cream__inner--hit">
+                <img src="img/ice-coffe.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+                <p class="ice-cream__price">380 &#8381;
+                  <span class="units">/кг</span>
+                </p>
+              </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочно-кофейное с кусочками шоколада
@@ -223,10 +225,12 @@
           </li>
           <li class="hit__item">
             <article class="ice-cream">
-              <img src="img/ice-strawberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-              <p class="ice-cream__price">355 &#8381;
-                <span class="units">/кг</span>
-              </p>
+              <div class="ice-cream__inner ice-cream__inner--hit">
+                <img src="img/ice-strawberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+                <p class="ice-cream__price">355 &#8381;
+                  <span class="units">/кг</span>
+                </p>
+              </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочно-клубничное с присыпкой из белого шоколада
@@ -237,14 +241,16 @@
           </li>
           <li class="hit__item">
             <article class="ice-cream">
-              <img src="img/ice-creme-brulee.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-              <p class="ice-cream__price">415 &#8381;
-                <span class="units">/кг</span>
-              </p>
+              <div class="ice-cream__inner ice-cream__inner--hit">
+                <img src="img/ice-creme-brulee.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+                <p class="ice-cream__price">415 &#8381;
+                  <span class="units">/кг</span>
+                </p>
+              </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочное крем-брюле с карамельной подливкой
-                </a>1172
+                </a>
               </h3>
               <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
             </article>
@@ -293,27 +299,27 @@
         </article>
         <section class="row-container__item mail">
           <h2 class="visually-hidden">Подписаться на рассылку</h2>
-          <p class="mail__text">
-            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить
-            и не слать всякой ненужной ерунды. Честно =)
-          </p>
-          <form class="mail-form" method="get" action="https://echo.htmlacademy.ru">
-            <p>
-              <label class="visually-hidden" for="mail-form">Электронная почта</label>
-              <input class="input mail__input" type="email" name="mail" id="mail-form" placeholder="Электронная почта" />
+          <div class="mail__inner">
+            <p class="mail__text">
+              Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить
+              и не слать всякой ненужной ерунды. Честно =)
             </p>
-            <input class="button mail__button" type="submit" name="mail-submit" value="Отправить" />
-          </form>
+            <form class="mail-form" method="get" action="https://echo.htmlacademy.ru">
+              <p>
+                <label class="visually-hidden" for="mail-form">Электронная почта</label>
+                <input class="input mail__input" type="email" name="mail" id="mail-form" placeholder="Электронная почта" />
+              </p>
+              <input class="button mail__button" type="submit" name="mail-submit" value="Отправить" />
+            </form>
+          </div>
         </section>
       </div>
     </div>
     <!-- Блок карты -->
     <section class="map">
       <h2 class="visually-hidden">Как нас найти</h2>
-      <div class="map__img-container">
-        <img class="map__img" src="img/map.png" width="1200" height="640" alt="Положение офиса на карте" />
-      </div>
-      <div class="container">
+      <!-- <img class="map__img" src="img/map.png" width="1200" height="640" alt="Положение офиса на карте" /> -->
+      <div class="container contacts-container">
         <div class="contacts">
           <p class="contacts__address">
             Адрес главного офиса<br />
@@ -322,7 +328,7 @@
           </p>
           <p class="contacts__phone">
             Для заказов по телефону:<br />
-            <span class="bold">8 812 450-25-25</span><br />
+            <span class="bold phone">8 812 450-25-25</span>
             (с 10 до 20 ежедневно)
           </p>
           <a class="button contacts__button" href="#">Форма обратной связи</a>
@@ -331,8 +337,7 @@
     </section>
     <!-- Конец блока карты -->
     </main>
-    <footer class="page-footer">
-    <div class="container">
+    <footer class="page-footer container">
       <ul class="footer-social">
         <li class="footer-social__btn">
           <a class="footer-social__link" href="#" aria-label="твиттер">
@@ -375,7 +380,6 @@
           &#169; 2017
         </p>
       </div>
-    </div>
     </footer>
   </div>
   <!-- всплывающее окно -->
@@ -403,6 +407,7 @@
       <img src="img/cross-big.svg" alt="Закрыть окно" width="18" height="17">
     </button>
   </section>
+
 </body>
 
 </html>
