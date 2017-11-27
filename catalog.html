@@ -22,7 +22,7 @@
           <a class="main-menu__link mein-menu__link--active" href="#">Каталог</a>
           <ul class="menu-catalog">
             <li class="menu-catalog__item">
-              <a class="menu-catalog__link" href="#">Новинки</a>
+              <a class="menu-catalog__link menu-catalog__link--new" href="#">Новинки</a>
             </li>
             <li class="menu-catalog__item menu-catalog__item--active">
               <a class="menu-catalog__link menu-catalog__link--active">Сливочное</a>
@@ -34,7 +34,7 @@
               <a class="menu-catalog__link" href="#">Фруктовый лед</a>
             </li>
             <li class="menu-catalog__item">
-              <a class="menu-catalog__link" href="#">Мелорин</a>
+              <a class="menu-catalog__link menu-catalog__link--last" href="#">Мелорин</a>
             </li>
           </ul>
         </li>
@@ -165,7 +165,7 @@
       <li class="breadcrumbs__item">Сливочное</li>
     </ul>
     <p class="work-time">
-      С 10 до 20, ежедневно
+      С 10 до 20, ежедневно<br>
       <b class="work-time__phone">8 812 450-25-25</b>
     </p>
   </header>
@@ -184,13 +184,21 @@
           </select>
         </div>
         <div class="filters-form__item form-item">
-          <!-- Нам пока не открыли видео об этом элементе, только на вебинаре проговорили общий принцып
-          по его созданию. Ниже написала, как я себе это представляю. -->
-          <p class="form-item__name">Цена: 100 руб. – 500 руб.</p>
+          <!-- Менять свг на див или нет? -->
+          <div class="form-item__name">
+            <span>Цена: </span>
+            <label class="visually-hidden" for="from">от</label>
+            <input class="form-item__price form-item__price--from" type="text" id="from" name="from" value="100">
+            <span>руб. – </span>
+            <label class="visually-hidden" for="to">до</label>
+            <input class="form-item__price form-item__price--to" type="text" id="to" name="to" value="500">
+            <span>руб.</span>
+            <button class="visually-hidden" type="submit">Показать</button>
+          </div>
           <div class="form-item__filter filter filter--range">
             <svg width="176" height="32">
               <line class="filter__line" x1="0" y1="18" x2="176" y2="18" stroke="rgba(255, 255, 255, 0.5)" stroke-width="4" />
-              <line class="filter__line" x1="14" y1="18" x2="120" y2="18" stroke="white" stroke-width="4" />
+              <line class="filter__line" x1="16" y1="18" x2="120" y2="18" stroke="white" stroke-width="4" />
             </svg>
             <img class="filter__btn filter__btn--left" tabindex="0" src="img/filter-button.svg" width="20" height="23" alt="левый указатель">
             <img class="filter__btn filter__btn--right" tabindex="0" src="img/filter-button.svg" width="20" height="23" alt="правый указатель">
@@ -234,9 +242,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner">
                 <img src="img/ice-orange.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">310р
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">310<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -250,9 +256,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner">
                 <img src="img/ice-coffe.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">380р
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">380<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -266,9 +270,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner">
                 <img src="img/ice-strawberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">355р
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">355<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -282,9 +284,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner">
                 <img src="img/ice-creme-brulee.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">415р
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">415<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -298,9 +298,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner">
                 <img src="img/ice-cowberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">325р
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">325<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -314,9 +312,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner">
                 <img src="img/ice-blueberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">410р
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">410<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -330,9 +326,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner">
                 <img src="img/ice-lemon.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">375р
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">375<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -346,9 +340,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner ">
                 <img src="img/ice-chocolate-chips.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">320р
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">320<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -362,9 +354,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner">
                 <img src="img/ice-vanilla.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">440р
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">440<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -378,9 +368,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner">
                 <img src="img/ice-menthol.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">435р
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">435<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -394,9 +382,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner">
                 <img src="img/ice-pieces-chocolate.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">355р
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">355<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -410,9 +396,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner">
                 <img src="img/ice-mint.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">420р
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">420<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -425,7 +409,7 @@
         </ul>
         <ul class="pages">
           <li class="pages__item pages__item--prev pages__item--disabled">
-            <a class="pages__link" aria-label="предыдущая страница">
+            <a class="pages__link pages__link--prev pages__link--disabled" aria-label="предыдущая страница">
               <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
                 <path class="pages__color pages__color--disabled" fill="#C1C6CE"
                 d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"/>
@@ -448,7 +432,7 @@
             <a class="pages__link" href="#">5</a>
           </li>
           <li class="pages__item pages__item--next">
-            <a class="pages__link" href="#" aria-label="следующая страница">
+            <a class="pages__link pages__link--next" href="#" aria-label="следующая страница">
               <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
                 <path class="pages__color" fill="#C1C6CE"
                 d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"/>

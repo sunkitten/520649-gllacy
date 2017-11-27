@@ -40,7 +40,7 @@
             <a class="main-menu__link" href="#">Каталог</a>
             <ul class="menu-catalog">
               <li class="menu-catalog__item">
-                <a class="menu-catalog__link" href="#">Новинки</a>
+                <a class="menu-catalog__link menu-catalog__link--new href="#">Новинки</a>
               </li>
               <li class="menu-catalog__item">
                 <a class="menu-catalog__link" href="catalog.html">Сливочное</a>
@@ -52,7 +52,7 @@
                 <a class="menu-catalog__link" href="#">Фруктовый лед</a>
               </li>
               <li class="menu-catalog__item">
-                <a class="menu-catalog__link" href="#">Мелорин</a>
+                <a class="menu-catalog__link menu-catalog__link--last" href="#">Мелорин</a>
               </li>
             </ul>
           </li>
@@ -126,7 +126,7 @@
         </ul>
       </nav>
       <p class="work-time">
-        С 10 до 20, ежедневно
+        С 10 до 20, ежедневно<br>
         <b class="work-time__phone">8 812 450-25-25</b>
       </p>
     </header>
@@ -192,9 +192,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner ice-cream__inner--hit">
                 <img src="img/ice-orange.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">310 &#8381;
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">310<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -208,9 +206,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner ice-cream__inner--hit">
                 <img src="img/ice-coffe.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">380 &#8381;
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">380<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -224,9 +220,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner ice-cream__inner--hit">
                 <img src="img/ice-strawberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">355 &#8381;
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">355<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -240,9 +234,7 @@
             <article class="ice-cream">
               <div class="ice-cream__inner ice-cream__inner--hit">
                 <img src="img/ice-creme-brulee.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">415 &#8381;
-                  <span class="units">/кг</span>
-                </p>
+                <p class="ice-cream__price">415<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
               </div>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
@@ -259,7 +251,7 @@
       <section class="about-us">
         <h2 class="visually-hidden">О нас</h2>
         <p class="about-us__text">
-          Магазин-Гэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
+          Магазин Глэйси &mdash; это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
         </p>
         <ul class="about-us__features features">
           <li class="features__item">
@@ -292,7 +284,7 @@
       <div class="row-container">
         <article class="row-container__item blog">
           <h2 class="blog__title">Новое в нашем блоге</h2>
-          <a class="blog__link" href="#">10 способов сервирвки фруктовых щербетов к столу</a>
+          <a class="link-black blog__link" href="#">10 способов сервирвки фруктовых щербетов к столу</a>
         </article>
         <section class="row-container__item mail">
           <h2 class="visually-hidden">Подписаться на рассылку</h2>
@@ -302,10 +294,8 @@
               и не слать всякой ненужной ерунды. Честно =)
             </p>
             <form class="mail-form" method="get" action="https://echo.htmlacademy.ru">
-              <p>
                 <label class="visually-hidden" for="mail-form">Электронная почта</label>
                 <input class="input mail__input" type="email" name="mail" id="mail-form" placeholder="Электронная почта" />
-              </p>
               <input class="button mail__button" type="submit" name="mail-submit" value="Отправить" />
             </form>
           </div>
