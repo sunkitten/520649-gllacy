@@ -109,7 +109,19 @@ body {
 
 /*всплывающее окно формы для обратной связи*/
 .feedback {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  z-index: 1;
+
+  display: none;
+  box-sizing: border-box;
+  width: 478px;
+  padding: 17px 24px 25px;
+  margin-left: -239px;
+
   background-color: #f8f7f4;
+  border-radius: 12px;
 }
 
 .feedback__text {
@@ -120,14 +132,41 @@ body {
   color: #323232;
 }
 
-.feedback-form__input {
+.feedback-form__inner {
+  position: relative;
+
+  margin: 18px 0 20px;
+}
+
+.feedback-form__label {
+  position: absolute;
+  top: 11px;
+  left: 14px;
+
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.feedback-form__input,
+.feedback-form__input:focus,
+.feedback-form__input:hover {
+  box-sizing: border-box;
+  padding: 16px 13px 2px;
   width: 267px;
+  height: 44px;
 
   font-size: 16px;
 }
 
+.feedback-form__input:focus + .feedback-form__label,
+.feedback-form__input:valid + .feedback-form__label {
+  font-size: 12px;
+
+  transform: translate(-7px, -11px);
+}
+
 .feedback-form__textarea {
-  width: 428px;
+  width: 400px;
   padding-top: 6px;
   padding-bottom: 5px;
 
@@ -141,9 +180,17 @@ body {
 
 .feedback-form__btn {
   padding: 10px 23px;
+  margin-left: auto;
+
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .modal-close {
+  position: absolute;
+  top: 15px;
+  right: 11px;
+
   background-color: #f8f7f4;
   border: none;
 }
@@ -493,7 +540,7 @@ body {
 }
 
 .basket__button {
-  width: 142px;
+  width: 145px;
   padding: 10px 14px;
   margin: 0 1px 0 auto;
 
@@ -676,6 +723,8 @@ body {
 }
 
 .banner-raspberries {
+  margin-right: 2.3%;
+
   background-color: #c3173b;
   background-image: url(../img/raspberries.jpg);
   background-position: 22% 52%;
@@ -703,6 +752,7 @@ body {
 .banner__button {
   padding: 10px 23px;
   margin: auto 0 0 auto;
+  align-self: flex-end;
 
   line-height: 25px;
 
@@ -728,7 +778,6 @@ body {
 
 .ice-cream {
   position: relative;
-  z-index: 1;
 
   display: flex;
   flex-direction: column;
@@ -817,7 +866,7 @@ body {
 }
  .ice-cream:hover {
   position: absolute;
-  z-index: 10;
+  z-index: 1;
 
   min-height: 341px;
   width: 100%;
@@ -944,6 +993,8 @@ body {
 }
 
 .mail {
+  display: flex;
+
   background-image: url(../img/letter-fon.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -953,6 +1004,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 148px;
+  width: 100%;
   margin: 6px;
   padding: 28px 20px 33px;
 

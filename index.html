@@ -376,15 +376,15 @@
       Мы обязательно вам ответим!
     </p>
     <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
-      <p>
-        <label class="visually-hidden" for="feedback-name">Ваше имя</label>
-        <input class="input feedback-form__input" type="text" name="name" id="feedback-name" placeholder="Как вас зовут?" />
+      <p class="feedback-form__inner">
+        <input class="input feedback-form__input" type="text" name="name" id="feedback-name" required />
+        <label class="feedback-form__label" for="feedback-name">Как вас зовут?</label>
       </p>
-      <p>
-        <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-        <input class="input feedback-form__input" type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?" />
+      <p class="feedback-form__inner">
+        <input class="input feedback-form__input" type="email" name="feedback-email" id="feedback-email" required />
+        <label class="feedback-form__label" for="feedback-email">Ваша почта для ответа?</label>
       </p>
-      <p>
+      <p class="feedback-form__inner">
         <label class="visually-hidden" for="feedback-text">Место для отзыва</label>
         <textarea class="input feedback-form__textarea" id="feedback-text" rows="6" placeholder="Напишите что-нибудь..."></textarea>
       </p>
