@@ -8,28 +8,15 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet"> -->
+
 </head>
 
 <body>
-  <div class="slider">
-    <input class="slider__input" type="radio" id="slider__radio-1" name="toggle" checked />
-    <input class="slider__input" type="radio" id="slider__radio-2" name="toggle" />
-    <input class="slider__input" type="radio" id="slider__radio-3" name="toggle" />
-    <ul class="slider__inner">
-      <li class="slider__slide">
-        <h3 class="slider__subtitle">Крем-брюле и пломбир с малиновым джемом</h3>
-        <a class="button slider__button" href="#">Давайте оба!</a>
-      </li>
-      <li class="slider__slide">
-        <h3 class="slider__subtitle">Шоколадный пломбир и лимонный сорбет</h3>
-        <a class="button slider__button" href="#">Давайте оба!</a>
-      </li>
-      <li class="slider__slide">
-        <h3 class="slider__subtitle">Пломбир с помадкой и клубничный щербет</h3>
-        <a class="button slider__button" href="#">Давайте оба!</a>
-      </li>
-    </ul>
+  <input class="visually-hidden" type="radio" id="slider__radio-1" name="toggle" checked>
+  <input class="visually-hidden" type="radio" id="slider__radio-2" name="toggle">
+  <input class="visually-hidden" type="radio" id="slider__radio-3" name="toggle">
+  <div class="slider-wrapper">
     <header class="page-header container">
       <a class="main-logo">
         <img class="main-logo__img" src="img/logo.svg" width="154" height="64" alt="Логотип Глейси" />
@@ -40,7 +27,7 @@
             <a class="main-menu__link" href="#">Каталог</a>
             <ul class="menu-catalog">
               <li class="menu-catalog__item">
-                <a class="menu-catalog__link menu-catalog__link--new href="#">Новинки</a>
+                <a class="menu-catalog__link menu-catalog__link--new" href="#">Новинки</a>
               </li>
               <li class="menu-catalog__item">
                 <a class="menu-catalog__link" href="catalog.html">Сливочное</a>
@@ -130,21 +117,12 @@
         <b class="work-time__phone">8 812 450-25-25</b>
       </p>
     </header>
-    <div class="slider__skin">
-      <label class="slider__radio" for="slider__radio-1" aria-label="первый слайд"></label>
-      <label class="slider__radio" for="slider__radio-2" aria-label="второй слайд"></label>
-      <label class="slider__radio" for="slider__radio-3" aria-label="третий слайд"></label>
-    </div>
     <main class="content">
     <div class="container">
       <h1 class="visually-hidden">Магазин мороженного Gllacy</h1>
-      <!-- Слайдер еще не проходили. После вебинара нужно доработать -->
-      <!-- <section class="slider">
+      <section class="slider">
         <h2 class=visually-hidden>Самые популярные наборы</h2>
-        <input class="slider__input" type="radio" id="slider__radio-1" name="toggle" checked />
-        <input class="slider__input" type="radio" id="slider__radio-2" name="toggle" />
-        <input class="slider__input" type="radio" id="slider__radio-3" name="toggle" />
-        <div class="slider__skin">
+        <div class="slider__controls">
           <label class="slider__radio" for="slider__radio-1" aria-label="первый слайд"></label>
           <label class="slider__radio" for="slider__radio-2" aria-label="второй слайд"></label>
           <label class="slider__radio" for="slider__radio-3" aria-label="третий слайд"></label>
@@ -163,7 +141,7 @@
             <a class="button slider__button" href="#">Давайте оба!</a>
           </li>
         </ul>
-      </section> -->
+      </section>
       <!-- Конец слайдера -->
       <!-- Банеры -->
       <section class="stock">
@@ -394,6 +372,7 @@
       <img src="img/cross-big.svg" alt="Закрыть окно" width="18" height="17">
     </button>
   </section>
+  <div class="modal-backdrop"></div>
 
 </body>
 
