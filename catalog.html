@@ -15,7 +15,7 @@
 <body>
   <header class="page-header container">
     <a class="main-logo" href="index.html">
-      <img class="main-logo__img" src="img/logo.svg" width="154" height="64" alt="Логотип Глейси" />
+      <img class="main-logo__img" src="img/logo.svg" width="154" height="64" alt="Логотип Глейси">
     </a>
     <nav class="main-navigation">
       <ul class="main-menu">
@@ -57,8 +57,10 @@
           </div>
           <div class="user-navigation__inner search-container">
             <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-              <label class="visually-hidden" for="search">Поиск</label>
-              <input class="input search-form__input" type="text" name="search" id="search" placeholder="Что ищем?" />
+              <p class="input-inner">
+                <input class="input search-form__input" type="text" name="search" id="search" required>
+                <label class="input-label" for="search">Что ищем?</label>
+              </p>
               <input class="visually-hidden" type="submit" name="search-btn" value="отправить">
             </form>
           </div>
@@ -76,15 +78,15 @@
           </div>
           <div class="user-navigation__inner login-container">
             <form class="login-form" method="get" action="https://echo.htmlacademy.ru">
-              <p class="login-form__item">
-                <label class="visually-hidden" for="login-form__email">Электронная почта</label>
-                <input class="input login-form__input" type="email" name="email" id="login-form__email" placeholder="Электронная почта" />
+              <p class="input-inner login-form__item">
+                <input class="input login-form__input" type="email" name="email" id="login-form__email" required>
+                <label class="input-label" for="login-form__email">Электронная почта</label>
               </p>
-              <p class="login-form__item">
-                <label class="visually-hidden" for="login-form__password">Пароль</label>
-                <input class="input login-form__input" type="password" name="password" id="login-form__password" placeholder="Пароль" />
+              <p class="input-inner login-form__item">
+                <input class="input login-form__input" type="password" name="password" id="login-form__password" required>
+                <label class="input-label" for="login-form__password">Пароль</label>
               </p>
-              <input class="button login-form__btn" type="submit" name="button" value="Войти" />
+              <input class="button login-form__btn" type="submit" name="button" value="Войти">
             </form>
             <div class="login__links">
               <a class="link-black login__link" href="#">Забыли пароль?</a>
@@ -176,8 +178,8 @@
       <h1 class="title">Сливочное мороженное</h1>
       <form class="filters-form" method="post" action="https://echo.htmlacademy.ru">
         <div class="filters-form__item form-item">
-          <p class="form-item__name">Сортировка</p>
-          <select class="form-item__filter filter filter--sorting" aria-label="сортировка" name="sorting">
+          <label class="form-item__name" for="filter-sorting">Сортировка</label>
+          <select class="form-item__filter filter filter--sorting" aria-label="сортировка" id="filter-sorting" name="sorting">
             <option selected value="popular">по популярности</option>
             <option value="cheap">сначала недорогие</option>
             <option value="expensive">сначала дорогие</option>
@@ -185,7 +187,6 @@
           </select>
         </div>
         <div class="filters-form__item form-item">
-          <!-- Менять свг на див или нет? -->
           <div class="form-item__name">
             <span>Цена: </span>
             <label class="visually-hidden" for="from">от</label>
@@ -197,12 +198,11 @@
             <button class="visually-hidden" type="submit">Показать</button>
           </div>
           <div class="form-item__filter filter filter--range">
-            <svg width="176" height="32">
-              <line class="filter__line" x1="0" y1="18" x2="176" y2="18" stroke="rgba(255, 255, 255, 0.5)" stroke-width="4" />
-              <line class="filter__line" x1="16" y1="18" x2="120" y2="18" stroke="white" stroke-width="4" />
-            </svg>
-            <img class="filter__btn filter__btn--left" tabindex="0" src="img/filter-button.svg" width="20" height="23" alt="левый указатель">
-            <img class="filter__btn filter__btn--right" tabindex="0" src="img/filter-button.svg" width="20" height="23" alt="правый указатель">
+            <div class="filter__base-line">
+              <div class="filter__second-line"></div>
+            </div>
+            <button class="filter__btn filter__btn--left">Минимальная цена</button>
+            <button class="filter__btn filter__btn--right">Максимальная цена</button>
           </div>
         </div>
         <fieldset class="filters-form__item form-item">
@@ -241,170 +241,206 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <article class="ice-cream">
-              <div class="ice-cream__inner">
-                <img src="img/ice-orange.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">310<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+              <img src="img/ice-orange.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">310
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочное с апельсиновым джемом и цитрусовой стружкой
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="catalog__item">
             <article class="ice-cream">
-              <div class="ice-cream__inner">
-                <img src="img/ice-coffe.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">380<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+              <img src="img/ice-coffe.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">380
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочно-кофейное с кусочками шоколада
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="catalog__item">
             <article class="ice-cream">
-              <div class="ice-cream__inner">
-                <img src="img/ice-strawberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">355<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+              <img src="img/ice-strawberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">355
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочно-клубничное с присыпкой из белого шоколада
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="catalog__item">
             <article class="ice-cream">
-              <div class="ice-cream__inner">
-                <img src="img/ice-creme-brulee.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">415<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+              <img src="img/ice-creme-brulee.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">415
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочное крем-брюле с карамельной подливкой
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="catalog__item">
             <article class="ice-cream">
-              <div class="ice-cream__inner">
-                <img src="img/ice-cowberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">325<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+              <img src="img/ice-cowberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">325
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочное с брусничным джемом
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="catalog__item">
             <article class="ice-cream">
-              <div class="ice-cream__inner">
-                <img src="img/ice-blueberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">410<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+              <img src="img/ice-blueberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">410
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочно-черничное с цельными ягодами черники
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="catalog__item">
             <article class="ice-cream">
-              <div class="ice-cream__inner">
-                <img src="img/ice-lemon.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">375<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+              <img src="img/ice-lemon.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">375
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочно-лимонное с карамельной присыпкой
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="catalog__item">
             <article class="ice-cream">
-              <div class="ice-cream__inner ">
-                <img src="img/ice-chocolate-chips.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">320<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+              <img src="img/ice-chocolate-chips.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">320
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочное с шоколадной стружкой
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="catalog__item">
             <article class="ice-cream">
-              <div class="ice-cream__inner">
-                <img src="img/ice-vanilla.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">440<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+              <img src="img/ice-vanilla.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">440
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочно-ванильное с кусочками шоколада
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="catalog__item">
             <article class="ice-cream">
-              <div class="ice-cream__inner">
-                <img src="img/ice-menthol.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">435<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+              <img src="img/ice-menthol.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">435
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочноe с ментоловым сиропом
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="catalog__item">
             <article class="ice-cream">
-              <div class="ice-cream__inner">
-                <img src="img/ice-pieces-chocolate.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">355<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+              <img src="img/ice-pieces-chocolate.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">355
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочное с кусочками черного шоколада
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="catalog__item">
             <article class="ice-cream">
-              <div class="ice-cream__inner">
-                <img src="img/ice-mint.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">420<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+              <img src="img/ice-mint.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">420
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочное с мятным сиропом
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
         </ul>

@@ -19,7 +19,7 @@
   <div class="slider-wrapper">
     <header class="page-header container">
       <a class="main-logo">
-        <img class="main-logo__img" src="img/logo.svg" width="154" height="64" alt="Логотип Глейси" />
+        <img class="main-logo__img" src="img/logo.svg" width="154" height="64" alt="Логотип Глейси">
       </a>
       <nav class="main-navigation">
         <ul class="main-menu">
@@ -60,8 +60,10 @@
             </div>
             <div class="user-navigation__inner search-container">
               <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-                <label class="visually-hidden" for="search">Поиск</label>
-                <input class="input search-form__input" type="text" name="search" id="search" placeholder="Что ищем?" />
+                <p class="input-inner">
+                  <input class="input search-form__input" type="text" name="search" id="search" required>
+                  <label class="input-label" for="search">Что ищем?</label>
+                </p>
                 <input class="visually-hidden" type="submit" name="search-btn" value="отправить">
               </form>
             </div>
@@ -79,15 +81,15 @@
             </div>
             <div class="user-navigation__inner login-container">
               <form class="login-form" method="get" action="https://echo.htmlacademy.ru">
-                <p class="login-form__item">
-                  <label class="visually-hidden" for="login-form__email">Электронная почта</label>
-                  <input class="input login-form__input" type="email" name="email" id="login-form__email" placeholder="Электронная почта" />
+                <p class="input-inner login-form__item">
+                  <input class="input login-form__input" type="email" name="email" id="login-form__email" required>
+                  <label class="input-label" for="login-form__email">Электронная почта</label>
                 </p>
-                <p class="login-form__item">
-                  <label class="visually-hidden" for="login-form__password">Пароль</label>
-                  <input class="input login-form__input" type="password" name="password" id="login-form__password" placeholder="Пароль" />
+                <p class="input-inner login-form__item">
+                  <input class="input login-form__input" type="password" name="password" id="login-form__password" required>
+                  <label class="input-label" for="login-form__password">Пароль</label>
                 </p>
-                <input class="button login-form__btn" type="submit" name="button" value="Войти" />
+                <input class="button login-form__btn" type="submit" name="button" value="Войти">
               </form>
               <div class="login__links">
                 <a class="link-black login__link" href="#">Забыли пароль?</a>
@@ -167,59 +169,71 @@
         <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="hit__list">
           <li class="hit__item">
-            <article class="ice-cream">
-              <div class="ice-cream__inner ice-cream__inner--hit">
-                <img src="img/ice-orange.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">310<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+            <article class="ice-cream ice-cream--hit">
+              <img src="img/ice-orange.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">310
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочное с апельсиновым джемом и цитрусовой стружкой
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="hit__item">
-            <article class="ice-cream">
-              <div class="ice-cream__inner ice-cream__inner--hit">
-                <img src="img/ice-coffe.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">380<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+            <article class="ice-cream ice-cream--hit">
+              <img src="img/ice-coffe.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">380
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочно-кофейное с кусочками шоколада
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="hit__item">
-            <article class="ice-cream">
-              <div class="ice-cream__inner ice-cream__inner--hit">
-                <img src="img/ice-strawberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">355<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+            <article class="ice-cream ice-cream--hit">
+              <img src="img/ice-strawberry.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">355
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочно-клубничное с присыпкой из белого шоколада
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
           <li class="hit__item">
-            <article class="ice-cream">
-              <div class="ice-cream__inner ice-cream__inner--hit">
-                <img src="img/ice-creme-brulee.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
-                <p class="ice-cream__price">415<b class="rub"> &#8381;</b><span class="units">/кг</span></p>
-              </div>
+            <article class="ice-cream ice-cream--hit">
+              <img src="img/ice-creme-brulee.jpg" alt="Фото мороженного" width="267" height="267" class="ice-cream__img">
+              <p class="ice-cream__price">415
+                <b class="rub">Р</b>
+                <span class="units">/кг</span>
+              </p>
               <h3 class="ice-cream__name">
                 <a class="link-white ice-cream__link" href="#">
                   Сливочное крем-брюле с карамельной подливкой
                 </a>
               </h3>
-              <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              <div class="button-wrapper">
+                <a href="#" class="button ice-cream__button">Быстрый просмотр</a>
+              </div>
             </article>
           </li>
         </ul>
@@ -272,9 +286,11 @@
               и не слать всякой ненужной ерунды. Честно =)
             </p>
             <form class="mail-form" method="get" action="https://echo.htmlacademy.ru">
-                <label class="visually-hidden" for="mail-form">Электронная почта</label>
-                <input class="input mail__input" type="email" name="mail" id="mail-form" placeholder="Электронная почта" />
-              <input class="button mail__button" type="submit" name="mail-submit" value="Отправить" />
+              <p class="input-inner mail-form__inner">
+                <input class="input mail__input" type="email" name="mail" id="mail-form" required>
+                <label class="input-label" for="mail-form">Электронная почта</label>
+              </p>
+              <input class="button mail__button" type="submit" name="mail-submit" value="Отправить">
             </form>
           </div>
         </section>
@@ -283,7 +299,6 @@
     <!-- Блок карты -->
     <section class="map">
       <h2 class="visually-hidden">Как нас найти</h2>
-      <!-- <img class="map__img" src="img/map.png" width="1200" height="640" alt="Положение офиса на карте" /> -->
       <div class="container contacts-container">
         <div class="contacts">
           <p class="contacts__address">
@@ -354,17 +369,17 @@
       Мы обязательно вам ответим!
     </p>
     <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
-      <p class="feedback-form__inner">
-        <input class="input feedback-form__input" type="text" name="name" id="feedback-name" required />
-        <label class="feedback-form__label" for="feedback-name">Как вас зовут?</label>
+      <p class="input-inner feedback-form__inner">
+        <input class="input feedback-form__input" type="text" name="name" id="feedback-name" required>
+        <label class="input-label feedback-form__label" for="feedback-name">Как вас зовут?</label>
       </p>
-      <p class="feedback-form__inner">
-        <input class="input feedback-form__input" type="email" name="feedback-email" id="feedback-email" required />
-        <label class="feedback-form__label" for="feedback-email">Ваша почта для ответа?</label>
+      <p class="input-inner feedback-form__inner">
+        <input class="input feedback-form__input" type="email" name="feedback-email" id="feedback-email" required>
+        <label class="input-label feedback-form__label" for="feedback-email">Ваша почта для ответа?</label>
       </p>
-      <p class="feedback-form__inner">
-        <label class="visually-hidden" for="feedback-text">Место для отзыва</label>
-        <textarea class="input feedback-form__textarea" id="feedback-text" rows="6" placeholder="Напишите что-нибудь..."></textarea>
+      <p class="input-inner feedback-form__inner">
+        <textarea class="input feedback-form__textarea" id="feedback-text" rows="6" required></textarea>
+        <label class="input-label" for="feedback-text">Напишите что-нибудь...</label>
       </p>
       <input class="button feedback-form__btn" type="submit" name="feedback-button" value="Отправить" />
     </form>
