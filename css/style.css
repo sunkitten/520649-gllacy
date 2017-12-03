@@ -56,7 +56,8 @@ img {
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -125,10 +126,8 @@ img {
   text-decoration: none;
   font-weight: bold;
   color: #ffffff;
-
-  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
   border: none;
   border-radius: 18%/50%;
@@ -137,41 +136,43 @@ img {
 .button:hover,
 .button:focus {
   outline: 0;
-  background-image: -moz-linear-gradient( 90deg, rgba(231, 74, 53, 0.8) 0%, rgba(242, 104, 67, 0.8) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgba(231, 74, 53, 0.8) 0%, rgba(242, 104, 67, 0.8) 100%);
   background-image: -ms-linear-gradient( 90deg, rgba(231, 74, 53, 0.8) 0%, rgba(242, 104, 67, 0.8) 100%);
+  background-image: linear-gradient( 90deg, rgba(231, 74, 53, 0.8) 0%, rgba(242, 104, 67, 0.8) 100%);
   background-color: rgba(255, 255, 255, 1);
 }
 
 .button:active {
-  background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
 }
 
 .link-black {
   color: #323232;
-  text-decoration: underline rgba(0, 0, 0, 0.3);
+  -webkit-text-decoration: underline rgba(0, 0, 0, 0.3);
+          text-decoration: underline rgba(0, 0, 0, 0.3);
 }
 
 .link-black:hover,
 .link-black:focus,
 .link-black:active {
   color: #e84d37;
-  text-decoration: underline rgba(236, 89, 60, 0.3);
+  -webkit-text-decoration: underline rgba(236, 89, 60, 0.3);
+          text-decoration: underline rgba(236, 89, 60, 0.3);
 }
 
 .link-white {
   color: #ffffff;
-  text-decoration: underline rgba(255, 255, 255, 0.3);
+  -webkit-text-decoration: underline rgba(255, 255, 255, 0.3);
+          text-decoration: underline rgba(255, 255, 255, 0.3);
 }
 
 .link-white:hover,
 .link-white:focus,
 .link-white:active {
   color: #ffbc9e;
-  text-decoration: underline rgba(249, 172, 159, 0.3);
+  -webkit-text-decoration: underline rgba(249, 172, 159, 0.3);
+          text-decoration: underline rgba(249, 172, 159, 0.3);
 }
 
 /*всплывающее окно формы для обратной связи*/
@@ -200,7 +201,8 @@ img {
   border-radius: 12px;
 
   opacity: 0;
-  transform: scale(0, 1);
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
   transition-duration: 0.6s;
 }
 
@@ -264,7 +266,8 @@ body.modal-show .modal-backdrop {
   display: block;
 
   opacity: 1;
-  transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .error {
@@ -277,10 +280,13 @@ body.modal-show .modal-backdrop {
   position: relative;
   padding-top: 9px;
 
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
 
   font-family: inherit;
   color: #ffffff;
@@ -294,15 +300,20 @@ body.modal-show .modal-backdrop {
 }
 
 .main-navigation {
-  flex-grow: 1;
-  align-items: center;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  -webkit-box-align: center;
+          align-items: center;
  width: calc(100% - 164px);
   min-height: 37px;
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 .main-menu {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
   max-width: calc(100% - 270px);
@@ -327,7 +338,8 @@ body.modal-show .modal-backdrop {
 
   color: #ffffff;
 
-  text-decoration: underline rgba(255, 255, 255, 0.2);
+  -webkit-text-decoration: underline rgba(255, 255, 255, 0.2);
+          text-decoration: underline rgba(255, 255, 255, 0.2);
   border-radius: 14px/50%;
 }
 
@@ -430,9 +442,11 @@ body.modal-show .modal-backdrop {
 }
 
 .user-navigation {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   width: 262px;
   padding: 0;
   margin: 0;
@@ -461,8 +475,10 @@ body.modal-show .modal-backdrop {
 }
 
 .user-navigation__icon {
+  display: -webkit-box;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
   padding: 6px 16px 7px;
 
   font-size: 14px;
@@ -639,6 +655,7 @@ body.modal-show .modal-backdrop {
 }
 
 .breadcrumbs {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -731,6 +748,7 @@ body.modal-show .modal-backdrop {
 .slider__controls {
   position: absolute;
   bottom: 63px;
+  display: -webkit-box;
   display: flex;
   width: 200px;
 
@@ -797,15 +815,20 @@ body.modal-show .modal-backdrop {
 
 /*баннеры*/
 .stock {
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   margin-bottom: 40px;
 }
 
 .banner {
   box-sizing: border-box;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   width: 48.9%;
   min-height: 229px;
   padding: 16px 21px 24px 19px;
@@ -856,8 +879,10 @@ body.modal-show .modal-backdrop {
 
 /*хиты*/
 .hit__list {
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   padding: 0;
   margin: 0;
   margin-bottom: 32px;
@@ -874,8 +899,11 @@ body.modal-show .modal-backdrop {
 .ice-cream {
   position: relative;
 
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   min-height: 285px;
 
   font-weight: 500;
@@ -1011,9 +1039,11 @@ body.modal-show .modal-backdrop {
 }
 
 .features {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   padding: 0;
   margin: 0;
 
@@ -1059,8 +1089,10 @@ body.modal-show .modal-backdrop {
 .row-container {
   margin-bottom: 39px;
 
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 .row-container__item {
@@ -1097,10 +1129,12 @@ body.modal-show .modal-backdrop {
   line-height: 30px;
   font-weight: bold;
   color: #323232;
-  text-decoration: underline #323232;
+  -webkit-text-decoration: underline #323232;
+          text-decoration: underline #323232;
 }
 
 .mail {
+  display: -webkit-box;
   display: flex;
   padding: 6px;
 
@@ -1110,8 +1144,11 @@ body.modal-show .modal-backdrop {
 }
 
 .mail__inner {
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   box-sizing: border-box;
   min-height: 209px;
   width: 100%;
@@ -1131,15 +1168,19 @@ body.modal-show .modal-backdrop {
 }
 
 .mail-form {
+  display: -webkit-box;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   margin-top: auto;
   margin-bottom: 0;
 }
 
 .mail-form__inner {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   margin-right: 12px;
 }
 
@@ -1243,9 +1284,11 @@ body.modal-show .modal-backdrop {
 
 /*фильтры*/
 .filters-form {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   width: 860px;
   margin-bottom: 25px;
 
@@ -1399,7 +1442,8 @@ body.modal-show .modal-backdrop {
 }
 
 .filter__btn:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .filter__input {
@@ -1468,9 +1512,11 @@ body.modal-show .modal-backdrop {
 
 /*каталог мороженного*/
 .catalog__list {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 
   padding: 0;
   margin-bottom: 75px;
@@ -1489,8 +1535,10 @@ body.modal-show .modal-backdrop {
 }
 
 .pages {
+  display: -webkit-box;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
   margin: 0;
   padding: 0;
   padding-bottom: 30px;
@@ -1532,7 +1580,8 @@ body.modal-show .modal-backdrop {
 .pages__item--prev {
   margin-right: 2px;
 
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .pages__item--next {
@@ -1566,15 +1615,19 @@ body.modal-show .modal-backdrop {
 
 /*подвал*/
 .page-footer {
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
   padding-top: 17px;
   padding-bottom: 23px;
 }
 
 .footer-social,
 .footer-navigation {
+  display: -webkit-box;
   display: flex;
   padding: 0;
   margin: 0;
@@ -1617,7 +1670,8 @@ body.modal-show .modal-backdrop {
 .footer-navigation {
   position: relative;
 
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   min-width: 312px;
   padding-top: 12px;
 }
