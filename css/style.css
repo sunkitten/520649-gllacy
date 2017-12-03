@@ -41,6 +41,10 @@ body {
   background-color: #849d8f;
 }
 
+img {
+  max-width: 100%;
+}
+
 .visually-hidden {
   position: absolute;
 
@@ -180,8 +184,7 @@ body {
 
   display: none;
 
-  background-color: #000000;
-  opacity: 0.3;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .feedback {
   position: fixed;
@@ -189,18 +192,21 @@ body {
   left: 50%;
   z-index: 1;
 
-  display: none;
   box-sizing: border-box;
-  width: 478px;
   padding: 17px 24px 25px;
   margin-left: -239px;
 
   background-color: #f8f7f4;
   border-radius: 12px;
+
+  opacity: 0;
+  transform: scale(0, 1);
+  transition-duration: 0.6s;
 }
 
 .feedback__text {
   margin: 0;
+
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
@@ -252,12 +258,23 @@ body {
   background-color: transparent;
   border: none;
 }
+
+body.modal-show .feedback,
+body.modal-show .modal-backdrop {
+  display: block;
+
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.error {
+  background-color: rgba(255, 0, 0, 0.2);
+}
 /*конец всплывающего окна*/
 
 /*блок header*/
 .page-header {
   position: relative;
-  /*z-index: 7px;*/
   padding-top: 9px;
 
   display: flex;
@@ -278,7 +295,8 @@ body {
 
 .main-navigation {
   flex-grow: 1;
-  min-width: 80%;
+  align-items: center;
+ width: calc(100% - 164px);
   min-height: 37px;
   display: flex;
   justify-content: space-between;
@@ -287,6 +305,7 @@ body {
 .main-menu {
   display: flex;
   flex-wrap: wrap;
+  max-width: calc(100% - 270px);
   padding: 0;
   margin: 0;
 
@@ -412,6 +431,7 @@ body {
 
 .user-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 262px;
   padding: 0;
@@ -508,6 +528,7 @@ body {
 
   font-size: 18px;
   line-height: 24px;
+  cursor: pointer;
 }
 
 .login__links {
@@ -619,9 +640,10 @@ body {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 21px 0 0;
-  min-width: 50%;
+  max-width: 75%;
 
   font-size: 14px;
   line-height: 16px;
@@ -722,6 +744,7 @@ body {
 
   border: 2px solid #ffffff;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 #slider__radio-1:checked ~ .slider-wrapper label[for="slider__radio-1"],
@@ -739,6 +762,8 @@ body {
 
 .slider__slide {
   display: none;
+
+  text-align: center;
 }
 
 #slider__radio-1:checked ~ .slider-wrapper .slider__slide:nth-child(1),
@@ -755,16 +780,17 @@ body {
   line-height: 60px;
   font-weight: bold;
   color: #ffffff;
-  text-align: center;
 }
 
 .slider__button {
-  width: 278px;
-  margin: 0 auto;
+  display: inline-block;
+  max-width: 450px;
+  padding: 8px 41px 12px;
 
   font-size: 32px;
-  line-height: 63px;
+  line-height: 44px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  vertical-align: middle;
 
   border-radius: 32px/50%;
 }
@@ -873,8 +899,6 @@ body {
 }
 
 .ice-cream__price {
-  position: relative;
-
   width: 100%;
   margin: 0;
   margin-top: -59px;
@@ -887,9 +911,11 @@ body {
 
 .units {
   font-size: 30px;
+  line-height: 35px;
 }
 
 .rub {
+  position: relative;
   padding-left: 13px;
 
   font-size: 0;
@@ -899,8 +925,8 @@ body {
 .rub::after {
   content: url(../img/ruble.svg);
   position: absolute;
-  top: 8px;
-  left: 80px;
+  top: -33px;
+  left: -8px;
 }
 
 .ice-cream__name {
@@ -1097,6 +1123,7 @@ body {
 
 .mail__text {
   margin: 0;
+  margin-bottom: 10px;
 
   font-size: 16px;
   line-height: 22px;
@@ -1128,11 +1155,15 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
+
+  cursor: pointer;
 }
 
 /*карта*/
 .map {
   min-height: 429px;
+
+  line-height: 0;
 
   overflow: hidden;
   background-image: url(../img/map.png);
@@ -1141,11 +1172,21 @@ body {
   background-size: cover;
 }
 
+.map__yandex {
+  width: 100%;
+
+  border: 0;
+}
+
 .contacts-container {
-  padding-top: 62px;
+  position: relative;
 }
 
 .contacts {
+  position: absolute;
+  top: 62px;
+  right: 0;
+
   width: 252px;
   padding: 30px 25px;
   margin-left: auto;
@@ -1432,7 +1473,7 @@ body {
   justify-content: space-between;
 
   padding: 0;
-  margin-bottom: 77px;
+  margin-bottom: 75px;
 
   list-style: none;
 }
@@ -1444,7 +1485,7 @@ body {
 }
 
 .catalog__item:nth-child(n + 5) {
-  margin-top: 32px;
+  margin-top: 33px;
 }
 
 .pages {
@@ -1577,7 +1618,7 @@ body {
   position: relative;
 
   justify-content: space-between;
-  min-width: 304px;
+  min-width: 312px;
   padding-top: 12px;
 }
 
@@ -1585,7 +1626,11 @@ body {
   content: url(../img/heart.svg);
   position: absolute;
   top: 13px;
-  left: -24px;
+  left: -21px;
+}
+
+.footer-navigation__items {
+  margin-right: 10px;
 }
 
 .footer-navigation__link {
@@ -1608,4 +1653,14 @@ body {
 
 .copyright__link {
     color: #fefefe;
+}
+
+@media ( max-width: 1000px ) {
+  .catalog__item:nth-child(n + 5) {
+  margin-top: 29px;
+  }
+
+  .catalog__list {
+    margin-bottom: 54px;
+  }
 }

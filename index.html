@@ -64,7 +64,7 @@
                   <input class="input search-form__input" type="text" name="search" id="search" required>
                   <label class="input-label" for="search">Что ищем?</label>
                 </p>
-                <input class="visually-hidden" type="submit" name="search-btn" value="отправить">
+                <input class="visually-hidden" type="submit" value="отправить">
               </form>
             </div>
           </li>
@@ -80,7 +80,7 @@
               <span class="user-navigation__text">Вход</span>
             </div>
             <div class="user-navigation__inner login-container">
-              <form class="login-form" method="get" action="https://echo.htmlacademy.ru">
+              <form class="login-form" method="post" action="https://echo.htmlacademy.ru">
                 <p class="input-inner login-form__item">
                   <input class="input login-form__input" type="email" name="email" id="login-form__email" required>
                   <label class="input-label" for="login-form__email">Электронная почта</label>
@@ -89,7 +89,7 @@
                   <input class="input login-form__input" type="password" name="password" id="login-form__password" required>
                   <label class="input-label" for="login-form__password">Пароль</label>
                 </p>
-                <input class="button login-form__btn" type="submit" name="button" value="Войти">
+                <input class="button login-form__btn" type="submit" value="Войти">
               </form>
               <div class="login__links">
                 <a class="link-black login__link" href="#">Забыли пароль?</a>
@@ -276,7 +276,7 @@
       <div class="row-container">
         <article class="row-container__item blog">
           <h2 class="blog__title">Новое в нашем блоге</h2>
-          <a class="link-black blog__link" href="#">10 способов сервирвки фруктовых щербетов к столу</a>
+          <a class="link-black blog__link" href="#">10 способов сервироки фруктовых щербетов к столу</a>
         </article>
         <section class="row-container__item mail">
           <h2 class="visually-hidden">Подписаться на рассылку</h2>
@@ -290,30 +290,31 @@
                 <input class="input mail__input" type="email" name="mail" id="mail-form" required>
                 <label class="input-label" for="mail-form">Электронная почта</label>
               </p>
-              <input class="button mail__button" type="submit" name="mail-submit" value="Отправить">
+              <input class="button mail__button" type="submit" value="Отправить">
             </form>
           </div>
         </section>
       </div>
     </div>
     <!-- Блок карты -->
+    <div class="container contacts-container">
+      <div class="contacts">
+        <p class="contacts__address">
+          Адрес главного офиса<br />
+          и офлайн-магазина:<br />
+          <span class="bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+        </p>
+        <p class="contacts__phone">
+          Для заказов по телефону:<br />
+          <span class="bold phone">8 812 450-25-25</span>
+          (с 10 до 20 ежедневно)
+        </p>
+        <a class="button contacts__button" href="#">Форма обратной связи</a>
+      </div>
+    </div>
     <section class="map">
       <h2 class="visually-hidden">Как нас найти</h2>
-      <div class="container contacts-container">
-        <div class="contacts">
-          <p class="contacts__address">
-            Адрес главного офиса<br />
-            и офлайн-магазина:<br />
-            <span class="bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
-          </p>
-          <p class="contacts__phone">
-            Для заказов по телефону:<br />
-            <span class="bold phone">8 812 450-25-25</span>
-            (с 10 до 20 ежедневно)
-          </p>
-          <a class="button contacts__button" href="#">Форма обратной связи</a>
-        </div>
-      </div>
+      <iframe class="map__yandex" src="https://yandex.ru/map-widget/v1/-/CBa77JtT9B" width="900" height="429"></iframe>
     </section>
     <!-- Конец блока карты -->
     </main>
@@ -378,16 +379,18 @@
         <label class="input-label feedback-form__label" for="feedback-email">Ваша почта для ответа?</label>
       </p>
       <p class="input-inner feedback-form__inner">
-        <textarea class="input feedback-form__textarea" id="feedback-text" rows="6" required></textarea>
+        <textarea class="input feedback-form__textarea" id="feedback-text" name="feedback-text" rows="6" required></textarea>
         <label class="input-label" for="feedback-text">Напишите что-нибудь...</label>
       </p>
-      <input class="button feedback-form__btn" type="submit" name="feedback-button" value="Отправить" />
+      <input class="button feedback-form__btn" type="submit" value="Отправить" />
     </form>
     <button class="modal-close" aria-label="Закрыть окно">
       <img src="img/cross-big.svg" alt="Закрыть окно" width="18" height="17">
     </button>
   </section>
   <div class="modal-backdrop"></div>
+
+  <script src="js/script.js"></script>
 
 </body>
 
