@@ -88,6 +88,7 @@ img {
 .input {
   padding: 9px 14px;
 
+  font-family: inherit;
   font-size: 14px;
   font-weight: bold;
   line-height: 24px;
@@ -343,8 +344,8 @@ body.modal-show .modal-backdrop {
   border-radius: 14px/50%;
 }
 
-.main-menu__link:hover,
-.main-menu__link:focus {
+.main-menu__item:hover .main-menu__link,
+.main-menu__item:focus .main-menu__link {
   color: #333333;
 
   background-color: #f7f6f3;
@@ -373,7 +374,7 @@ body.modal-show .modal-backdrop {
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.main-menu__item:first-child:hover .menu-catalog {
+.main-menu__item:hover .menu-catalog {
   position: absolute;
   top: 37px;
   left: -7px;
@@ -495,10 +496,10 @@ body.modal-show .modal-backdrop {
   padding: 8px;
 }
 
-.user-navigation__icon:hover,
-.user-navigation__icon:focus,
-.user-navigation__icon:hover .user-navigation__img-color,
-.user-navigation__icon:focus .user-navigation__img-color {
+.user-navigation__item:hover .user-navigation__icon,
+.user-navigation__item:focus .user-navigation__icon,
+.user-navigation__item:hover .user-navigation__img-color,
+.user-navigation__item:focus .user-navigation__img-color {
   color: #323232;
   fill: #323232;
 
@@ -611,6 +612,10 @@ body.modal-show .modal-backdrop {
   padding-bottom: 14px;
 }
 
+.basket-table__cell:first-child {
+  width: 12px;
+}
+
 .basket-table__delete,
 .basket-table__name,
 .basket-table__weight,
@@ -621,6 +626,8 @@ body.modal-show .modal-backdrop {
 
 .basket-table__thumb {
   padding: 3px 3px 0 9px;
+
+  border-radius: 50%;
 }
 
 .basket-table__name {
@@ -683,7 +690,7 @@ body.modal-show .modal-backdrop {
 }
 
 .work-time {
-  width: 167px;
+  width: 170px;
   margin: 0;
   margin-left: auto;
 
@@ -959,7 +966,7 @@ body.modal-show .modal-backdrop {
 
 .ice-cream__name {
   min-height: 44px;
-  margin: 9px 3px 7px;
+  margin: 9px 4px 7px;
 
   font-size: 16px;
   line-height: 22px;
@@ -1300,6 +1307,7 @@ body.modal-show .modal-backdrop {
 
 .filters-form__item {
   padding: 0;
+  margin-left: 0;
   margin-bottom: 15px;
 
   border: none;
@@ -1310,6 +1318,7 @@ body.modal-show .modal-backdrop {
   padding: 7px 28px;
   margin-bottom: 16px;
 
+  font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
@@ -1357,8 +1366,8 @@ body.modal-show .modal-backdrop {
 .form-item__filter {
   display: block;
   min-height: 36px;
-  padding: 8px 18px;
-  padding-left: 0;
+  padding: 5px 18px;
+  padding-left: 13px;
   margin: 0;
   box-sizing: border-box;
 
@@ -1450,25 +1459,36 @@ body.modal-show .modal-backdrop {
   display: none;
 }
 
+.filter--radio,
+.filter--checkbox {
+  display: flex;
+  justify-content: space-between;
+  min-width: 415px;
+}
+
+.filter--checkbox {
+  min-width: 702px;
+  padding-left: 16px;
+}
+
 .filter__name {
   position: relative;
-  padding-left: 36px;
+  padding-left: 32px;
   padding-bottom: 4px;
-  padding-top: 2px;
-  margin-left: 10px;
+  padding-top: 4px;
 
   cursor: pointer;
 }
 
 .filter__name--checkbox {
-   padding-left: 39px;
+   padding-left: 33px;
 }
 
 .filter__name--radio::before {
   content: "";
   position: absolute;
   top: 2px;
-  left: 5px;
+  left: 0;
 
   width: 22px;
   height: 22px;
@@ -1486,7 +1506,7 @@ body.modal-show .modal-backdrop {
   content: "";
   position: absolute;
   top: 3px;
-  left: 4px;
+  left: 0;
 
   width: 20px;
   height: 20px;
