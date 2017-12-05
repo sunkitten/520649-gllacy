@@ -63,7 +63,7 @@ img {
 }
 
 .container {
-  width: calc(100% - 4.4vw);
+  padding: 0 2.3%;
   min-width: 860px;
   max-width: 1146px;
   margin: 0 auto;
@@ -903,6 +903,10 @@ body.modal-show .modal-backdrop {
   width: 23.2%;
 }
 
+.hit__item:not(:last-child) {
+  margin-right: 2.3%;
+}
+
 .ice-cream {
   position: relative;
 
@@ -1111,6 +1115,7 @@ body.modal-show .modal-backdrop {
 
 .blog {
   padding: 23px 20px;
+  margin-right: 2.3%;
 
   background-color: #ffffff;
   background-image: url(../img/strawberry-fon.jpg);
@@ -1461,8 +1466,10 @@ body.modal-show .modal-backdrop {
 
 .filter--radio,
 .filter--checkbox {
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   min-width: 415px;
 }
 
@@ -1548,6 +1555,10 @@ body.modal-show .modal-backdrop {
   position: relative;
 
   width: 23.2%;
+}
+
+.catalog__item:not(:nth-child(4n)) {
+  margin-right: 2.3%;
 }
 
 .catalog__item:nth-child(n + 5) {
