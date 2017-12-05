@@ -127,7 +127,6 @@ img {
   text-decoration: none;
   font-weight: bold;
   color: #ffffff;
-  background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
   border: none;
@@ -137,13 +136,11 @@ img {
 .button:hover,
 .button:focus {
   outline: 0;
-  background-image: -ms-linear-gradient( 90deg, rgba(231, 74, 53, 0.8) 0%, rgba(242, 104, 67, 0.8) 100%);
   background-image: linear-gradient( 90deg, rgba(231, 74, 53, 0.8) 0%, rgba(242, 104, 67, 0.8) 100%);
   background-color: rgba(255, 255, 255, 1);
 }
 
 .button:active {
-  background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
 }
@@ -824,9 +821,10 @@ body.modal-show .modal-backdrop {
 .stock {
   display: -webkit-box;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
           justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .banner {
@@ -836,9 +834,11 @@ body.modal-show .modal-backdrop {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  width: 48.9%;
+  width: 48.85%;
   min-height: 229px;
   padding: 16px 21px 24px 19px;
+  margin-bottom: 20px;
+
 
   font-size: 18px;
   line-height: 22px;
@@ -847,9 +847,11 @@ body.modal-show .modal-backdrop {
   border-radius: 15px;
 }
 
-.banner-raspberries {
+.banner:nth-of-type(2n-1) {
   margin-right: 2.3%;
+}
 
+.banner-raspberries {
   background-color: #c3173b;
   background-image: url(../img/raspberries.jpg);
   background-position: 22% 52%;
@@ -888,11 +890,10 @@ body.modal-show .modal-backdrop {
 .hit__list {
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 12px;
 
   list-style: none;
 }
@@ -901,9 +902,10 @@ body.modal-show .modal-backdrop {
   position: relative;
 
   width: 23.2%;
+  margin-bottom: 20px;
 }
 
-.hit__item:not(:last-child) {
+.hit__item:not(:nth-child(4n)) {
   margin-right: 2.3%;
 }
 
@@ -946,7 +948,9 @@ body.modal-show .modal-backdrop {
   line-height: 45px;
   font-weight: bold;
   text-align: left;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
+
 
 .units {
   font-size: 30px;
@@ -962,10 +966,14 @@ body.modal-show .modal-backdrop {
 }
 
 .rub::after {
-  content: url(../img/ruble.svg);
+  content: "";
   position: absolute;
-  top: -33px;
+  top: -31px;
   left: -8px;
+  width: 31px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAjCAYAAACD1LrRAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAA/pJREFUWIW1mF9oW1Ucxz/n3qR2bZNC1VGZdNRiR8t0NLUbffXFgha0Zd2jUId7EQdjKM6N2gf/TPss+CYMUxDnRDfpJoi0OqGis3sY2+zWknRqNptmzXaz5Cb3+nDOzW7vbtOkyb5wuOGee8739/ud3/f8fkT0RPrwQAN0IKiewvtBCdiABeSBgvpt+X0Y8Hmn//H7bK4CMslo27lsNnttdTU9PT09c+KDDz+6DGSAnDLCdn+v+ewRrJQUQAhRV19f37V16+MHhodfmf7+zLef7tmzezsQAuq8XH7E+maIPUZora2tIxOfHD89PDz0DBD2kvsRV3KmJdHY2PjUwTff+Ly7u6sd6XnQ2d+PuKZoampqf2/s2BHgMaABFVG/5PLF6Guvv59MLt/SND2jaSLvnsvlTKu7u6tl38je53ftenZA07Q1x9XR0TE4MPBCdGrqrAFkgULZxMnk8q1YLD4PLAMGa7NULC0taefO/XD+7bcO/zoysndcCFEkF0JoQ0MvD01Nnb0CpIFc2aHWND2jSP8G4p4RU2Px+McTXy0sLJ7yrt/e1hZBJtkWQK+AWOSVp2ngts9IKcMScxcvTnrXNzc3PwE0Ao8AetmhVrA9w2/OiMfjV7wLA4HAFkUaBLRaZ7UNWP39/a3eCdM07yFVJABRa2IBaJ2dT+/zTqRSqQTy3rYBu9JQlyIUgP7NqZOD4VBo1PvB1at/XUJKyQSsAA9Wo5DfzpZlB5AXQAjPGT/X21u3f/9o+44dna+Gw+EDbikB2LZtfRGd/Am4i0vHZVWjr09++dmGfq+DCxf+nJmd/W0RWEVWrILGJqtRuVhOJv959+ixKPAfUnL3HOKqq1Ep0kOHDk8kEjdjwE2kxzlUctWsGjmwbduam5s7/86RoycU6Q2kxwayKSDAgxfBpmBZVn5lZeXf+flrl6LRyR9nfv7FudcTijSNzGgbQPRE+hoGX3qxPRaPbzMMo8U082G/RCpVnVKpVC6ZXMkie60scAcZ1hX1NBRpsf8KAOZ3p88sKYsagGY/jzaoTqhNC4ogi8zedXsuJ9Qm9+Pve+ZCrCkSd3yIHW0XlOc2st3RXQY5nSeiJ9IX3ExXWQnGxsZ3qqhmlAH2Q9cxQCwe34Y8wiLXQ9WxA8MwWnD1Ww5xzXXsRaFQaEDVYTdxTXRcCrquZ7ifcIDM6sLY2PjOanS8Een16wtxpCKK62qp4/XgyPA2MqOLxAVkmueR1eOu32pPl5mugNhWe5u4wh1ACtp0W+OHYDDg7i4rIfYagUO85gWQj/TubgOeBB5F9sEZIImMhmN1VUnp13OZSK9Ahjao3mWQF37JyFRD7D5z5x8B5w527tuqJfg/45jBaKbz2d8AAAAASUVORK5CYII=");
 }
 
 .ice-cream__name {
@@ -1091,31 +1099,36 @@ body.modal-show .modal-backdrop {
   left: -1px;
 }
 
-
 .features__text {
   margin: 0;
 }
 
 /*блог и подписка*/
 .row-container {
-  margin-bottom: 39px;
+  margin-bottom: 19px;
 
   display: -webkit-box;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
           justify-content: space-between;
 }
 
 .row-container__item {
-  width: 48.9%;
+  width: 48.85%;
+  min-height: 221px;
   box-sizing: border-box;
+  margin-bottom: 20px;
 
   border-radius: 15px;
 }
 
+.row-container__item:nth-child(2n-1) {
+  margin-right: 2.3%;
+}
+
 .blog {
   padding: 23px 20px;
-  margin-right: 2.3%;
 
   background-color: #ffffff;
   background-image: url(../img/strawberry-fon.jpg);
@@ -1310,12 +1323,22 @@ body.modal-show .modal-backdrop {
   color: #ffffff;
 }
 
+.filters-form__row {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .filters-form__item {
   padding: 0;
   margin-left: 0;
   margin-bottom: 15px;
 
   border: none;
+}
+
+.filters-form__row .filters-form__item:not(:last-child) {
+  margin-right: 16px;
 }
 
 .filters-form__btn {
@@ -1485,6 +1508,10 @@ body.modal-show .modal-backdrop {
   padding-top: 4px;
 
   cursor: pointer;
+}
+
+.filter__name:not(:last-child) {
+  margin-right: 10px;
 }
 
 .filter__name--checkbox {

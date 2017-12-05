@@ -177,47 +177,49 @@
     <div class="container">
       <h1 class="title">Сливочное мороженое</h1>
       <form class="filters-form" method="get" action="https://echo.htmlacademy.ru">
-        <div class="filters-form__item form-item">
-          <label class="form-item__name" for="filter-sorting">Сортировка:</label>
-          <select class="form-item__filter filter filter--sorting" aria-label="сортировка" id="filter-sorting" name="sorting">
-            <option selected value="popular">по популярности</option>
-            <option value="cheap">сначала недорогие</option>
-            <option value="expensive">сначала дорогие</option>
-            <option value="fat-content">по жирности</option>
-          </select>
-        </div>
-        <div class="filters-form__item form-item">
-          <div class="form-item__name">
-            <span>Цена: </span>
-            <label class="visually-hidden" for="from">от</label>
-            <input class="form-item__price form-item__price--from" type="text" id="from" name="from" value="100">
-            <span>руб. – </span>
-            <label class="visually-hidden" for="to">до</label>
-            <input class="form-item__price form-item__price--to" type="text" id="to" name="to" value="500">
-            <span>руб.</span>
-            <button class="visually-hidden" type="submit">Показать</button>
+        <div class="filters-form__row">
+          <div class="filters-form__item form-item">
+            <label class="form-item__name" for="filter-sorting">Сортировка:</label>
+            <select class="form-item__filter filter filter--sorting" aria-label="сортировка" id="filter-sorting" name="sorting">
+              <option selected value="popular">по популярности</option>
+              <option value="cheap">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fat-content">по жирности</option>
+            </select>
           </div>
-          <div class="form-item__filter filter filter--range">
-            <div class="filter__base-line">
-              <div class="filter__second-line"></div>
+          <div class="filters-form__item form-item">
+            <div class="form-item__name">
+              <span>Цена: </span>
+              <label class="visually-hidden" for="from">от</label>
+              <input class="form-item__price form-item__price--from" type="text" id="from" name="from" value="100">
+              <span>руб. – </span>
+              <label class="visually-hidden" for="to">до</label>
+              <input class="form-item__price form-item__price--to" type="text" id="to" name="to" value="500">
+              <span>руб.</span>
+              <button class="visually-hidden" type="submit">Показать</button>
             </div>
-            <button class="filter__btn filter__btn--left">Минимальная цена</button>
-            <button class="filter__btn filter__btn--right">Максимальная цена</button>
+            <div class="form-item__filter filter filter--range">
+              <div class="filter__base-line">
+                <div class="filter__second-line"></div>
+              </div>
+              <button class="filter__btn filter__btn--left">Минимальная цена</button>
+              <button class="filter__btn filter__btn--right">Максимальная цена</button>
+            </div>
           </div>
+          <fieldset class="filters-form__item form-item">
+            <legend class="form-item__name">Жирность:</legend>
+            <p class="form-item__filter filter filter--radio">
+              <input class="filter__input" type="radio" id="0%" name="fat-content" value="0">
+              <label class="filter__name filter__name--radio" for="0%">0%</label>
+              <input class="filter__input" type="radio" id="10%" name="fat-content" value="10" checked>
+              <label class="filter__name filter__name--radio" for="10%">до 10%</label>
+              <input class="filter__input" type="radio" id="30%" name="fat-content" value="30">
+              <label class="filter__name filter__name--radio" for="30%">до 30%</label>
+              <input class="filter__input" type="radio" id=">30%" name="fat-content" value="100">
+              <label class="filter__name filter__name--radio" for=">30%">выше 30%</label>
+            </p>
+          </fieldset>
         </div>
-        <fieldset class="filters-form__item form-item">
-          <legend class="form-item__name">Жирность:</legend>
-          <p class="form-item__filter filter filter--radio">
-            <input class="filter__input" type="radio" id="0%" name="fat-content" value="0">
-            <label class="filter__name filter__name--radio" for="0%">0%</label>
-            <input class="filter__input" type="radio" id="10%" name="fat-content" value="10" checked>
-            <label class="filter__name filter__name--radio" for="10%">до 10%</label>
-            <input class="filter__input" type="radio" id="30%" name="fat-content" value="30">
-            <label class="filter__name filter__name--radio" for="30%">до 30%</label>
-            <input class="filter__input" type="radio" id=">30%" name="fat-content" value="100">
-            <label class="filter__name filter__name--radio" for=">30%">выше 30%</label>
-          </p>
-        </fieldset>
         <fieldset class="filters-form__item form-item">
           <legend class="form-item__name">Наполнители:</legend>
           <p class="form-item__filter filter filter--checkbox">
