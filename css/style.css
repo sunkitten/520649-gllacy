@@ -1246,12 +1246,14 @@ body.modal-show .modal-backdrop {
 
 .contacts-container {
   position: relative;
+  box-sizing: border-box;
+  width: 95.5%;
 }
 
 .contacts {
   position: absolute;
   top: 62px;
-  right: 2.3%;
+  right: 0;
 
   width: 252px;
   padding: 30px 25px;
