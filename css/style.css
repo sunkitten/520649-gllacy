@@ -70,19 +70,7 @@ img {
 }
 
 .input-inner {
-  position: relative;
   margin: 0;
-}
-
-.input-label {
-  position: absolute;
-  top: 11px;
-  left: 14px;
-
-  color: #999999;
-
-  pointer-events: none;
-  transition: 0.2s;
 }
 
 .input {
@@ -110,13 +98,20 @@ img {
   outline: 0;
 }
 
-.input:focus + .input-label,
-.input:valid + .input-label {
-  top: -20px;
-  left: 7px;
+.input::-webkit-input-placeholder {
+  font-weight: normal;
+}
 
-  font-size: 13px;
-  color: #323232;
+.input::-moz-placeholder {
+  font-weight: normal;
+}
+
+.input:-moz-placeholder {
+  font-weight: normal;
+}
+
+.input:-ms-input-placeholder {
+  font-weight: normal;
 }
 
 .button {
